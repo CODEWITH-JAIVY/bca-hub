@@ -12,13 +12,13 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q1: What are operators in C?</strong>
           <br />
-          A1: Operators are symbols that perform specific operations on operands (variables and values).
+          A1: Operators are symbols that perform specific operations on operands (variables and values). They tell the computer what to do with the data.
         </p>
 
         <p className="mb-4">
           <strong>Q2: What are different types of operators in C?</strong>
           <br />
-          A2: Types include arithmetic operators, relational operators, logical operators, assignment operators, and bitwise operators.
+          A2: Types include arithmetic operators, relational operators, logical operators, assignment operators, and bitwise operators. Each type performs different kinds of operations.
         </p>
       </section>
 
@@ -28,7 +28,7 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q3: What are arithmetic operators?</strong>
           <br />
-          A3: Arithmetic operators perform mathematical operations such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).
+          A3: Arithmetic operators perform mathematical operations such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%). These allow you to perform basic math in your programs.
         </p>
       </section>
 
@@ -38,7 +38,7 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q4: What are relational operators?</strong>
           <br />
-          A4: Relational operators compare two operands and return a Boolean value (true or false), such as equal to (==), not equal to (!=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=).
+          A4: Relational operators compare two operands and return a Boolean value (true or false), such as equal to (==), not equal to (!=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). These are essential for making decisions in your code.
         </p>
       </section>
 
@@ -48,7 +48,7 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q5: What are logical operators?</strong>
           <br />
-          A5: Logical operators combine two or more conditions and return a Boolean value, such as AND (&&), OR (||), and NOT (!).
+          A5: Logical operators combine two or more conditions and return a Boolean value, such as AND (&amp;&amp;), OR (||), and NOT (!). They help you create more complex conditions.
         </p>
       </section>
 
@@ -58,7 +58,7 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q6: What are assignment operators?</strong>
           <br />
-          A6: Assignment operators assign a value to a variable, such as =, +=, -=, *=, and /=.
+          A6: Assignment operators assign a value to a variable, such as =, +=, -=, *=, and /=. They are used to store values in variables.
         </p>
       </section>
 
@@ -68,7 +68,7 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q7: What are input/output (I/O) functions in C?</strong>
           <br />
-          A7: I/O functions allow programs to receive input from the user and display output, such as printf() for output and scanf() for input.
+          A7: I/O functions allow programs to receive input from the user and display output, such as printf() for output and scanf() for input. These functions are crucial for interacting with the user.
         </p>
       </section>
 
@@ -76,14 +76,55 @@ const Chapter2_OperatorsAndIO = () => {
       <section className="mt-8">
         <h3 className="text-xl font-semibold mb-2">Important Questions for Practice:</h3>
         <ol className="list-decimal ml-6 space-y-1">
-          <li>What is the order of precedence of arithmetic operators in C?</li>
-          <li>Explain the difference between prefix and postfix increment operators.</li>
-          <li>How are relational operators used in decision-making statements?</li>
-          <li>Create a program that demonstrates the use of logical operators.</li>
-          <li>Describe the purpose of assignment operators and their shorthand notations.</li>
-          <li>How can you use the printf() function to format output in C?</li>
-          <li>Explain how the scanf() function reads input from the user.</li>
-          <li>What are the common errors to avoid when using I/O functions in C?</li>
+          <li>
+            <strong>What is the order of precedence of arithmetic operators in C?</strong>
+            <br/>
+            <em>The order of precedence determines the order in which operators are evaluated. It's usually: Parentheses, Multiplication/Division/Modulus, Addition/Subtraction.</em>
+          </li>
+          <li>
+            <strong>Explain the difference between prefix and postfix increment operators.</strong>
+            <br/>
+            <em>Prefix increment (++i) increments the value of the variable before it is used. Postfix increment (i++) increments the value of the variable after it is used.</em>
+          </li>
+          <li>
+            <strong>How are relational operators used in decision-making statements?</strong>
+            <br/>
+            <em>Relational operators are used in if statements and loops to compare values and determine whether a block of code should be executed.</em>
+          </li>
+          <li>
+            <strong>Create a program that demonstrates the use of logical operators.</strong>
+            <br/>
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int a = 5, b = 10;\n` +
+               `  if (a > 0 && b < 20) {\n` +
+               `    printf("Both conditions are true.\\n");\n` +
+               `  }\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>
+          </li>
+          <li>
+            <strong>Describe the purpose of assignment operators and their shorthand notations.</strong>
+            <br/>
+            <em>Assignment operators assign values to variables. Shorthand notations (like +=, -=) provide a concise way to perform an operation and assign the result to a variable.</em>
+          </li>
+          <li>
+            <strong>How can you use the printf() function to format output in C?</strong>
+            <br/>
+            <em>printf() uses format specifiers (like %d, %f, %s) to control how data is displayed. You can also use flags, width specifiers, and precision specifiers to customize the output.</em>
+          </li>
+          <li>
+            <strong>Explain how the scanf() function reads input from the user.</strong>
+            <br/>
+            <em>scanf() reads input from the user and stores it in variables. You need to provide format specifiers that match the data types of the variables you're reading into. Don't forget the ampersand (&amp;) before variable names!</em>
+          </li>
+          <li>
+            <strong>What are the common errors to avoid when using I/O functions in C?</strong>
+            <br/>
+            <em>Common errors include using incorrect format specifiers, forgetting the &amp; in scanf(), and not handling input validation.</em>
+          </li>
         </ol>
       </section>
     </div>
