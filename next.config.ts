@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    missingSuspense: false,
+  },
 };
 
 export default nextConfig;
+
