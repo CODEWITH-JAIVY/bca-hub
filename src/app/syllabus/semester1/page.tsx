@@ -8,61 +8,73 @@ const subjects = [
     subjectName: 'Mathematics I',
     description: 'Fundamental concepts of Mathematics.',
     chapters: [
-      'Algebra',
-      'Calculus',
-      'Trigonometry',
-      'Coordinate Geometry',
+      'Determinants and Matrices',
+      'Limits and Continuity',
+      'Differentiation',
+      'Integration',
+      'Vector Algebra',
     ],
+    subjectLink: '/syllabus/semester1/MathematicsI', // Link to the new page
   },
   {
     subjectName: 'Programming Principles And Algorithm',
     description: 'Introduction to programming and algorithm design.',
     chapters: [
-      'Introduction to Programming',
-      'Data Types and Variables',
+      'Basics and C Intro',
+      'Operators and I/O',
       'Control Structures',
-      'Algorithm Design',
+      'Problem Solving and Algorithms',
+      'Simple Arithmetic Problems',
+      'Functions'
     ],
+    subjectLink: '/syllabus/semester1/ProgrammingPrinciplesAndAlgorithm', // Link to the new page
   },
   {
     subjectName: 'Computer Fundamentals and Office Automation',
     description: 'Basic computer knowledge and office automation tools.',
     chapters: [
-      'Introduction to Computers',
-      'Operating Systems',
-      'Office Automation Tools',
-      'Networking Basics',
+      'Intro To Computers and Number Systems',
+      'Algorithm and Flowchart',
+      'Operating System Basics',
+      'Windows OS Basics',
+      'Editors and Word Processors',
+      'Excel and Database Basics'
     ],
+    subjectLink: '/syllabus/semester1/ComputerFundamentalsAndOfficeAutomation', // Link to the new page
   },
   {
     subjectName: 'Principle Of Management',
     description: 'Core principles of management.',
     chapters: [
-      'Introduction to Management',
-      'Planning and Decision Making',
-      'Organizing',
-      'Controlling',
+      'Nature of Management',
+      'Management Thought',
+      'Functions of Management I',
+      'Functions of Management II',
+      'Management of Change',
+      'Strategic Management'
     ],
+    subjectLink: '/syllabus/semester1/PrincipleOfManagement', // Link to the new page
   },
   {
     subjectName: 'Business Communication',
     description: 'Effective communication in business settings.',
     chapters: [
-      'Introduction to Communication',
-      'Communication Process',
+      'Means of Communication',
       'Types of Communication',
-      'Business Correspondence',
+      'Written Communication',
+      'Business Letters and Reports',
+      'Drafting Letters',
+      'IT in Communication'
     ],
+    subjectLink: '/syllabus/semester1/BusinessCommunication', // Link to the new page
   },
   {
     subjectName: 'Environmental Studies',
     description: 'Basics of Environmental studies.',
     chapters: [
       'Introduction to Environmental Studies',
-      'Ecosystems',
-      'Environmental Pollution',
-      'Natural Resources',
     ],
+    subjectLink: '/syllabus/semester1/EnvironmentalStudies', // Link to the new page
   },
 ];
 
@@ -78,6 +90,7 @@ const Semester1Syllabus = () => {
             description={subject.description}
             semester={1}
             chapters={subject.chapters}
+            subjectLink={subject.subjectLink} // Pass the link
           />
         ))}
       </div>

@@ -13,46 +13,58 @@ const subjects = [
       'Linear Algebra',
       'Probability and Statistics',
     ],
+    subjectLink: '/syllabus/semester2/MathematicsII',
   },
   {
     subjectName: 'C Programming',
     description: 'Introduction to C programming language.',
     chapters: [
-      'Introduction to C',
-      'Functions and Pointers',
-      'Arrays and Strings',
+      'Arrays',
+      'Pointers',
+      'Strings',
       'Structures and Unions',
+      'Preprocessor and Bitwise Operations',
+      'File Handling'
     ],
+    subjectLink: '/syllabus/semester2/CProgramming',
   },
   {
     subjectName: 'Organizational Behaviour',
     description: 'Understanding human behavior in organizations.',
     chapters: [
-      'Introduction to Organizational Behaviour',
-      'Individual Behaviour',
-      'Group Dynamics',
-      'Organizational Culture',
+      'Organizational Fundamentals',
+      'Personality and Motivation',
+      'Personality and Attitude',
+      'Stress and Management',
+      'Group Behaviour and Leadership',
+      'Conflict and Resolution'
     ],
+    subjectLink: '/syllabus/semester2/OrganizationalBehaviour',
   },
   {
     subjectName: 'Digital Electronics and Computer Organisation',
     description: 'Basics of digital electronics and computer architecture.',
     chapters: [
-      'Number Systems and Codes',
-      'Logic Gates',
+      'Logic Gates and Boolean Algebra',
       'Combinational Circuits',
-      'Computer Organization',
+      'Memory Units',
+      'Sequential Circuits',
+      'Memory Organisation',
     ],
+    subjectLink: '/syllabus/semester2/DigitalElectronicsAndComputerOrganisation',
   },
   {
     subjectName: 'Financial Accounting and Management',
     description: 'Principles of financial accounting and management.',
     chapters: [
-      'Introduction to Accounting',
-      'Financial Statements',
-      'Cost Accounting',
-      'Management Accounting',
+      'Overview and Standards',
+      'Basics of Accounting',
+      'Financial Statements Analysis',
+      'Financial Management Basics',
+      'Working Capital',
+      'Inventory, Cash & Receivables Mgmt'
     ],
+    subjectLink: '/syllabus/semester2/FinancialAccountingAndManagement',
   },
 ];
 
@@ -68,6 +80,7 @@ const Semester2Syllabus = () => {
             description={subject.description}
             semester={2}
             chapters={subject.chapters}
+            subjectLink={subject.subjectLink}
           />
         ))}
       </div>

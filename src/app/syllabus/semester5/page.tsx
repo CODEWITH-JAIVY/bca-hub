@@ -8,21 +8,27 @@ const subjects = [
     subjectName: 'DBMS and SQL',
     description: 'Database management systems and SQL.',
     chapters: [
-      'Introduction to DBMS',
-      'Relational Model',
-      'SQL Queries',
-      'Database Design',
+      'DB Intro and Models',
+      'Relational Model and Normalisation',
+      'SQL and Queries',
+      'Transactions and Recovery',
+      'Database Design and Security',
+      'Advanced DBMS Concepts'
     ],
+    subjectLink: '/syllabus/semester5/DBMSAndSQL',
   },
   {
     subjectName: 'Web Technologies',
     description: 'Web development technologies.',
     chapters: [
-      'HTML and CSS',
-      'JavaScript',
-      'Server-Side Scripting',
-      'Web Frameworks',
+      'HTML and CSS Basics',
+      'JavaScript and DOM',
+      'Responsive Design',
+      'Bootstrap and Frameworks',
+      'Node and Express',
+      'MongoDB Integration'
     ],
+    subjectLink: '/syllabus/semester5/WebTechnologies',
   },
   {
     subjectName: 'Data Mining',
@@ -33,26 +39,31 @@ const subjects = [
       'Classification',
       'Clustering',
     ],
+    subjectLink: '/syllabus/semester5/DataMining',
   },
   {
     subjectName: 'Artificial Intelligence',
     description: 'Artificial intelligence principles and algorithms.',
     chapters: [
-      'Introduction to AI',
+      'Intro To AI',
       'Search Algorithms',
       'Knowledge Representation',
       'Machine Learning',
+      'Expert Systems and Applications'
     ],
+    subjectLink: '/syllabus/semester5/ArtificialIntelligence',
   },
   {
     subjectName: 'Computational Mathematics',
     description: 'Mathematical methods for computation.',
     chapters: [
-      'Numerical Methods',
-      'Optimization Techniques',
-      'Graph Theory',
-      'Mathematical Modeling',
+      'Numerical Methods and Root Finding',
+      'Interpolation and Approximation',
+      'Integration and Differentiation',
+      'Differential Equations',
+      'Linear Algebra'
     ],
+    subjectLink: '/syllabus/semester5/ComputationalMathematics',
   },
 ];
 
@@ -68,6 +79,7 @@ const Semester5Syllabus = () => {
             description={subject.description}
             semester={5}
             chapters={subject.chapters}
+            subjectLink={subject.subjectLink}
           />
         ))}
       </div>

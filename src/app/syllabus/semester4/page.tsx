@@ -8,21 +8,26 @@ const subjects = [
     subjectName: 'Computer Graphics and Multimedia',
     description: 'Concepts of computer graphics and multimedia technologies.',
     chapters: [
-      'Introduction to Computer Graphics',
+      'Scan Conversion',
+      'Display and Clipping',
       '2D and 3D Transformations',
-      'Multimedia Basics',
-      'Animation Techniques',
+      'Curves and Solids',
+      'Multimedia Concepts',
+      'Multimedia Applications'
     ],
+    subjectLink: '/syllabus/semester4/ComputerGraphicsAndMultimedia',
   },
   {
     subjectName: 'Operating System',
     description: 'Principles of operating systems.',
     chapters: [
-      'Introduction to Operating Systems',
-      'Process Management',
-      'Memory Management',
-      'File Systems',
+      'Intro and Memory Management',
+      'Processes and Scheduling',
+      'Deadlocks',
+      'Device and Storage Mgmt',
+      'File System Design',
     ],
+    subjectLink: '/syllabus/semester4/OperatingSystem',
   },
   {
     subjectName: 'Software Engineering',
@@ -33,16 +38,19 @@ const subjects = [
       'Software Design',
       'Software Testing',
     ],
+    subjectLink: '/syllabus/semester4/SoftwareEngineering',
   },
   {
     subjectName: 'Optimization Techniques',
     description: 'Techniques for optimization problems.',
     chapters: [
       'Linear Programming',
-      'Nonlinear Programming',
-      'Dynamic Programming',
-      'Genetic Algorithms',
+      'Queuing Theory',
+      'Replacement Theory',
+      'Inventory Theory',
+      'Game Theory',
     ],
+    subjectLink: '/syllabus/semester4/OptimizationTechniques',
   },
 ];
 
@@ -58,6 +66,7 @@ const Semester4Syllabus = () => {
             description={subject.description}
             semester={4}
             chapters={subject.chapters}
+            subjectLink={subject.subjectLink}
           />
         ))}
       </div>

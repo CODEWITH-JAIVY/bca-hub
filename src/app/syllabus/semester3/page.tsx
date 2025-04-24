@@ -8,51 +8,63 @@ const subjects = [
     subjectName: 'OOP Using C++',
     description: 'Object-oriented programming concepts using C++.',
     chapters: [
-      'Introduction to OOP',
+      'Intro To OOP and C++',
       'Classes and Objects',
-      'Inheritance',
-      'Polymorphism',
+      'Inheritance and Polymorphism',
+      'Generic Functions and Templates',
+      'File Handling and Exceptions'
     ],
+    subjectLink: '/syllabus/semester3/OOPUsingC++',
   },
   {
     subjectName: 'Data Structures',
     description: 'Fundamental data structures and their applications.',
     chapters: [
-      'Arrays',
-      'Linked Lists',
+      'Arrays and Matrices',
       'Stacks and Queues',
-      'Trees and Graphs',
+      'Linked Lists',
+      'Trees and Traversal',
+      'B-Trees and Indexing',
+      'Sorting and Searching'
     ],
+    subjectLink: '/syllabus/semester3/DataStructures',
   },
   {
     subjectName: 'Computer Architecture and Assembly',
     description: 'Computer architecture and assembly language programming.',
     chapters: [
-      'Computer Architecture',
-      'Assembly Language Basics',
-      'Instruction Set',
-      'Memory Management',
+      'Basic Computer Design',
+      'CPU and Arithmetic Algorithms',
+      'Computer Arithmetic',
+      'I/O and DMA',
+      'Microprocessors Overview',
+      'Assembly Language Basics'
     ],
+    subjectLink: '/syllabus/semester3/ComputerArchitectureAndAssembly',
   },
   {
     subjectName: 'Business Economics',
     description: 'Economic principles in business decision-making.',
     chapters: [
-      'Introduction to Economics',
-      'Demand and Supply',
+      'Economic Basics and Production',
       'Market Structures',
-      'Macroeconomics',
+      'Macroeconomic Concepts',
+      'World Economy and WTO'
     ],
+    subjectLink: '/syllabus/semester3/BusinessEconomics',
   },
   {
     subjectName: 'Elements of Statistics',
     description: 'Basic statistical concepts and methods.',
     chapters: [
-      'Introduction to Statistics',
-      'Data Collection and Presentation',
-      'Measures of Central Tendency',
-      'Probability Distributions',
+      'Data and Classification',
+      'Central Tendency',
+      'Measures of Dispersion',
+      'Permutation and Combination',
+      'Probability and Events',
+      'Statistical Quality Control'
     ],
+    subjectLink: '/syllabus/semester3/ElementsOfStatistics',
   },
 ];
 
@@ -68,6 +80,7 @@ const Semester3Syllabus = () => {
             description={subject.description}
             semester={3}
             chapters={subject.chapters}
+            subjectLink={subject.subjectLink}
           />
         ))}
       </div>
