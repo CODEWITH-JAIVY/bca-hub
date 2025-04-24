@@ -34,6 +34,31 @@ const Chapter1_IntroAndOSIModel = () => {
                 <br />
                 A6: The Data Link layer provides error-free transmission of data frames between two directly connected nodes.
             </p>
+            <p>
+                <strong>Q7: What is the function of the Network layer?</strong>
+                <br />
+                A7: The Network layer is responsible for the routing and forwarding of data packets across networks, ensuring that data reaches its destination.
+            </p>
+            <p>
+                <strong>Q8: What is the function of the Transport layer?</strong>
+                <br />
+                A8: The Transport layer ensures reliable data transmission between devices, including error recovery, flow control, and segmentation of data into smaller units.
+            </p>
+            <p>
+                <strong>Q9: What is the function of the Session layer?</strong>
+                <br />
+                A9: The Session layer manages communication sessions between applications, allowing for the opening, closing, and managing of connections.
+            </p>
+            <p>
+                <strong>Q10: What is the function of the Presentation layer?</strong>
+                <br />
+                A10: The Presentation layer translates data into a format that the application can understand, handling tasks such as encryption, compression, and translation of data formats.
+            </p>
+            <p>
+                <strong>Q11: What is the function of the Application layer?</strong>
+                <br />
+                A11: The Application layer provides network services directly to end-user applications, such as email, file transfer, and web browsing.
+            </p>
         </div>
     );
 };

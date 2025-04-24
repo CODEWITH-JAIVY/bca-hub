@@ -19,7 +19,6 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    missingSuspense: false,
   },
 };
 

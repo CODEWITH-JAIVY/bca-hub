@@ -2,38 +2,60 @@ import React from 'react';
 
 const Chapter4_IOAndDMA = () => {
     return (
-        <div>
-            <h2>Chapter 4: I/O and DMA</h2>
+        <div className="p-4 space-y-4">
+            <h2 className="text-2xl font-bold mb-4">Chapter 4: I/O and DMA</h2>
+
+            <h3 className="text-xl font-semibold">1. Introduction to I/O</h3>
             <p>
-                <strong>Q1: What is input/output (I/O) in a computer system?</strong>
-                <br />
-                A1: I/O refers to the communication between a computer system and the external world, involving input devices (e.g., keyboard, mouse) and output devices (e.g., monitor, printer).
+                Input/Output (I/O) operations involve communication between the computer system and the external environment via devices such as keyboard, mouse (input), and monitor, printer (output).
             </p>
+
+            <h3 className="text-xl font-semibold">2. I/O Interface</h3>
             <p>
-                <strong>Q2: What are the different methods of I/O data transfer?</strong>
-                <br />
-                A2: Methods include programmed I/O, interrupt-driven I/O, and direct memory access (DMA).
+                The I/O interface connects the I/O devices to the system bus and manages data communication. It includes status registers, control signals, and data buffers.
             </p>
+
+            <h3 className="text-xl font-semibold">3. Asynchronous Data Transfer</h3>
             <p>
-                <strong>Q3: What is programmed I/O?</strong>
-                <br />
-                A3: Programmed I/O is a method where the CPU directly controls the I/O devices, continuously checking the status of the device and transferring data.
+                Data transfer between devices operating at different speeds requires handshaking or strobe-based control to ensure synchronization.
             </p>
+
+            <h3 className="text-xl font-semibold">4. Modes of Data Transfer</h3>
+            <ul className="list-disc list-inside">
+                <li><strong>Programmed I/O:</strong> CPU checks device status in a loop (polling) to transfer data.</li>
+                <li><strong>Interrupt-Driven I/O:</strong> Device sends interrupt signal to CPU when ready to transfer data.</li>
+                <li><strong>DMA (Direct Memory Access):</strong> Device transfers data directly to/from memory without CPU.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold">5. Priority Interrupts</h3>
             <p>
-                <strong>Q4: What is interrupt-driven I/O?</strong>
-                <br />
-                A4: Interrupt-driven I/O is a method where the I/O device signals the CPU when it is ready to transfer data, allowing the CPU to perform other tasks while waiting.
+                When multiple devices request interrupt, a priority mechanism decides which interrupt to service first.
             </p>
+
+            <h3 className="text-xl font-semibold">6. Direct Memory Access (DMA)</h3>
             <p>
-                <strong>Q5: What is Direct Memory Access (DMA)?</strong>
-                <br />
-                A5: DMA is a method where the I/O device transfers data directly to or from memory without involving the CPU, improving data transfer efficiency.
+                DMA allows peripherals to access memory directly without CPU intervention, speeding up data transfer.
             </p>
+
+            <h3 className="text-xl font-semibold">7. I/O Processor (IOP)</h3>
             <p>
-                <strong>Q6: What are the advantages of DMA?</strong>
-                <br />
-                A6: Advantages include higher data transfer rates, reduced CPU overhead, and improved system performance.
+                An IOP handles I/O tasks independently from the CPU, managing data transfers and device communication.
             </p>
+
+            <h3 className="text-xl font-semibold">8. Serial Communication</h3>
+            <p>
+                Data is transmitted one bit at a time over a single channel. Common standards include RS-232 and USB.
+            </p>
+
+            <h3 className="text-xl font-semibold">Important Questions</h3>
+            <ul className="list-disc list-inside">
+                <li>Explain the difference between programmed I/O, interrupt-driven I/O, and DMA.</li>
+                <li>What is an I/O interface and what are its main components?</li>
+                <li>Describe the steps involved in Direct Memory Access (DMA).</li>
+                <li>What are priority interrupts? How are they managed?</li>
+                <li>Define asynchronous data transfer and explain handshaking.</li>
+                <li>Compare and contrast IOP and CPU in terms of I/O management.</li>
+            </ul>
         </div>
     );
 };

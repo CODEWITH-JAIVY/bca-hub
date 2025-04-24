@@ -6,7 +6,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">Chapter 5: Simple Arithmetic Problems</h2>
 
-      {/* Adding Two Numbers */}
+      {/* Introduction */}
       <section className="mb-6">
         <h3 className="text-xl font-semibold mb-2">Adding Two Numbers</h3>
         <p className="mb-4">
@@ -36,7 +36,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
         <li><code>int main()</code>: The main function where the program execution starts.</li>
         <li><code>int a, b, sum;</code>: Declares three integer variables <code>a</code>, <code>b</code>, and <code>sum</code>.</li>
         <li><code>printf("Enter two numbers: ");</code>: Prompts the user to enter two numbers.</li>
-        <li><code>scanf("%d %d", &amp;a, &amp;b);</code>: Reads two integers from the user and stores them in variables <code>a</code> and <code>b</code>.</li>
+        <li><code>scanf("%d %d", &a, &b);</code>: Reads two integers from the user and stores them in variables <code>a</code> and <code>b</code>.</li>
         <li><code>sum = a + b;</code>: Calculates the sum of <code>a</code> and <code>b</code> and stores it in the <code>sum</code> variable.</li>
         <li><code>printf("Sum = %d", sum);</code>: Displays the value of <code>sum</code> to the user.</li>
         <li><code>return 0;</code>: Indicates that the program executed successfully.</li>
@@ -72,7 +72,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
         <li><code>int main()</code>: The main function where the program execution starts.</li>
         <li><code>float a, b, c, average;</code>: Declares three float variables <code>a</code>, <code>b</code>, and <code>c</code> for input numbers and <code>average</code> for the calculated average.</li>
         <li><code>printf("Enter three numbers: ");</code>: Prompts the user to enter three numbers.</li>
-        <li><code>scanf("%f %f %f", &amp;a, &amp;b, &amp;c);</code>: Reads three float numbers from the user and stores them in variables <code>a</code>, <code>b</code>, and <code>c</code>.</li>
+        <li><code>scanf("%f %f %f", &a, &b, &c);</code>: Reads three float numbers from the user and stores them in variables <code>a</code>, <code>b</code>, and <code>c</code>.</li>
         <li><code>average = (a + b + c) / 3;</code>: Calculates the average of <code>a</code>, <code>b</code>, and <code>c</code>.</li>
         <li><code>printf("Average = %.2f", average);</code>: Displays the calculated average to two decimal places.</li>
         <li><code>return 0;</code>: Indicates that the program executed successfully.</li>
@@ -109,7 +109,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
         <li><code>int main()</code>: The main function where the program execution starts.</li>
         <li><code>float length, width, area;</code>: Declares three float variables <code>length</code>, <code>width</code>, and <code>area</code> for the length, width, and calculated area.</li>
         <li><code>printf("Enter length and width: ");</code>: Prompts the user to enter the length and width of the rectangle.</li>
-        <li><code>scanf("%f %f", &amp;length, &amp;width);</code>: Reads the length and width from the user and stores them in variables <code>length</code> and <code>width</code>.</li>
+        <li><code>scanf("%f %f", &length, &width);</code>: Reads the length and width from the user and stores them in variables <code>length</code> and <code>width</code>.</li>
         <li><code>area = length * width;</code>: Calculates the area of the rectangle.</li>
         <li><code>printf("Area = %.2f", area);</code>: Displays the calculated area to two decimal places.</li>
          <li><code>return 0;</code>: Indicates that the program executed successfully.</li>
@@ -122,23 +122,23 @@ const Chapter5_SimpleArithmeticProblems = () => {
         <h3 className="text-xl font-semibold mb-2">Important Questions for Practice:</h3>
         <ol className="list-decimal ml-6 space-y-1">
           <li>
-             <strong>Write a C program to calculate the sum of digits of a given number.</strong>
+            <strong>Write a C program to calculate the sum of digits of a given number.</strong>
                <br/>
                <em>Include detailed comments explaining every step. What should your edge case coverage and input validations consist of to make sure only integers are entered?</em>
                <br/>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
-                ` int num, sum = 0, m;\n` +
-                ` printf("Enter a number: ");\n` +
-                ` scanf("%d", &num);\n` +
-                ` while (num > 0) {\n` +
-                `  m = num % 10;\n` +
-                `  sum = sum + m;\n` +
-                `  num = num / 10;\n` +
-                ` }\n` +
-                ` printf("Sum of digits = %d\\n", sum);\n` +
-                ` return 0;\n` +
+                `  int num, sum = 0, m;\n` +
+                `  printf("Enter a number: ");\n` +
+                `  scanf("%d", &num);\n` +
+                `  while (num > 0) {\n` +
+                `    m = num % 10;\n` +
+                `    sum = sum + m;\n` +
+                `    num = num / 10;\n` +
+                `  }\n` +
+                `  printf("Sum of digits = %d\\n", sum);\n` +
+                `  return 0;\n` +
                 `}`}
                </code>
           </li>
@@ -218,7 +218,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
           <li>
             <strong>Create a C program to convert Celsius to Fahrenheit and vice versa.</strong>
                <br/>
-                *Explain how could one validate the number being passed into the program is a number*
+                <em>Explain how could one validate the number being passed into the program is a number</em>
                <br/>
                <code>
                {`#include <stdio.h>\n` +
@@ -239,7 +239,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
           <li>
             <strong>Write a C program to calculate simple interest.</strong>
                <br/>
-                *Discuss the limitations of using floats.*
+                <em>Discuss the limitations of using floats.</em>
                <br/>
                <code>
                {`#include <stdio.h>\n` +
@@ -256,7 +256,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
           <li>
             <strong>Create a C program to find the area of a circle.</strong>
                <br/>
-                *How can we account for PI being different depending on the precision required, and allow that to be modified during runtime?*
+                <em>How can we account for PI being different depending on the precision required, and allow that to be modified during runtime?</em>
                <br/>
                <code>
                {`#include <stdio.h>\n` +
@@ -274,8 +274,8 @@ const Chapter5_SimpleArithmeticProblems = () => {
           <li>
             <strong>Write a C program to check if a number is even or odd.</strong>
                <br/>
-               *What are the other methods (bitwise or formulaic) of determining if a number is even or odd?
-               Discuss their performance charactaristics.*
+               <em>What are the other methods (bitwise or formulaic) of determining if a number is even or odd?
+               Discuss their performance charactaristics.</em>
                <br/>
                <code>
                {`#include <stdio.h>\n` +
@@ -299,3 +299,4 @@ const Chapter5_SimpleArithmeticProblems = () => {
 };
 
 export default Chapter5_SimpleArithmeticProblems;
+

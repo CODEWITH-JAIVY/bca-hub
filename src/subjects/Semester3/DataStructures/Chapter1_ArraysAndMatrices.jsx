@@ -2,51 +2,73 @@ import React from 'react';
 
 const Chapter1_ArraysAndMatrices = () => {
     return (
-        <div>
-            <h2>Chapter 1: Arrays and Matrices</h2>
+        <div className="p-4 space-y-4">
+            <h2 className="text-2xl font-bold mb-4">Chapter 1: Arrays and Matrices</h2>
+
+            <h3 className="text-xl font-semibold">1. What is an Array?</h3>
             <p>
-                <strong>Q1: What is an array?</strong>
-                <br />
-                A1: An array is a collection of elements of the same data type, stored in contiguous memory locations.
+                An array is a linear data structure that stores elements of the same data type in contiguous memory locations. Each element is accessed using its index, starting from 0.
             </p>
+
+            <div className="bg-gray-100 p-3 rounded">
+                <pre><code>int arr[5] = {'{1, 2, 3, 4, 5} '};</code></pre>
+                <p>Memory Layout Example:</p>
+                <pre className="whitespace-pre-wrap">
+Index:   0   1   2   3   4
+Value:   1   2   3   4   5
+                </pre>
+            </div>
+
+            <h3 className="text-xl font-semibold">2. Characteristics of Arrays</h3>
+            <ul className="list-disc list-inside">
+                <li>Fixed size</li>
+                <li>Same data type</li>
+                <li>Stored in contiguous memory</li>
+                <li>Random access using index</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold">3. What is a Matrix?</h3>
             <p>
-                <strong>Q2: What is a matrix?</strong>
-                <br />
-                A2: A matrix is a two-dimensional array, consisting of rows and columns.
+                A matrix is a two-dimensional array organized in rows and columns. It can be visualized like a table.
             </p>
+
+            <div className="bg-gray-100 p-3 rounded">
+                <pre><code>int matrix[2][3] = {'{ {1, 2, 3}, {4, 5, 6} }  '};</code></pre>
+                <p>Matrix Layout:</p>
+                <pre className="whitespace-pre-wrap">
+Row\Col:   0   1   2
+       0   1   2   3
+       1   4   5   6
+                </pre>
+            </div>
+
+            <h3 className="text-xl font-semibold">4. Representation of Arrays</h3>
             <p>
-                <strong>Q3: How do you declare an array in C++?</strong>
-                <br />
-                A3: 
-                <code>
-                  int arr[5]; // Declares an integer array of size 5<br/>
-                  double values[10]; // Declares a double array of size 10
-                </code>
+                Arrays can be one-dimensional (1D), two-dimensional (2D), or multidimensional. In memory, they are stored in a row-major or column-major order.
             </p>
+
+            <h3 className="text-xl font-semibold">5. Special Types of Matrices</h3>
+            <ul className="list-disc list-inside">
+                <li><strong>Lower Triangular Matrix:</strong> All elements above the main diagonal are zero.</li>
+                <li><strong>Upper Triangular Matrix:</strong> All elements below the main diagonal are zero.</li>
+                <li><strong>Tridiagonal Matrix:</strong> Non-zero elements are only on the main diagonal and the diagonals just above and below it.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold">6. Vector Representation of Special Matrices</h3>
             <p>
-                <strong>Q4: How do you declare a matrix in C++?</strong>
-                <br />
-                A4: 
-                <code>
-                  int matrix[3][3]; // Declares a 3x3 integer matrix<br/>
-                  float data[4][5]; // Declares a 4x5 floating-point matrix
-                </code>
+                To save memory, special matrices like triangular and tridiagonal matrices are stored in vectors by storing only the non-zero elements.
             </p>
-            <p>
-                <strong>Q5: How do you access elements in an array?</strong>
-                <br />
-                A5: Array elements are accessed using their index, starting from 0. For example, <code>arr[0]</code> is the first element.
-            </p>
-            <p>
-                <strong>Q6: How do you access elements in a matrix?</strong>
-                <br />
-                A6: Matrix elements are accessed using row and column indices. For example, <code>matrix[0][0]</code> is the element at the first row and first column.
-            </p>
-            <p>
-                <strong>Q7: What are the advantages of using arrays and matrices?</strong>
-                <br />
-                A7: Arrays and matrices provide efficient storage and access to large amounts of data of the same type, simplifying data manipulation and algorithms.
-            </p>
+
+            <h3 className="text-xl font-semibold">7. Important Questions</h3>
+            <ul className="list-decimal list-inside">
+                <li>Define array and explain its characteristics.</li>
+                <li>Explain how arrays are represented in memory.</li>
+                <li>What is a matrix? How is it implemented using arrays?</li>
+                <li>Describe the row-major and column-major order for storing matrices.</li>
+                <li>What are sparse matrices? Explain their vector representation.</li>
+                <li>Differentiate between lower, upper, and tridiagonal matrices.</li>
+                <li>Write C++ code to declare and access a 2D matrix.</li>
+            </ul>
         </div>
     );
 };

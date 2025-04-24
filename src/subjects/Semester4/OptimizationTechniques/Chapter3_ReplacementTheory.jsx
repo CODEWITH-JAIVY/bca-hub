@@ -24,6 +24,11 @@ const Chapter3_ReplacementTheory = () => {
                 <br />
                 A4: You determine the optimal time by comparing the average annual cost of owning and operating the equipment for different replacement intervals.
             </p>
+            <p>
+                <strong>Q5: What is the difference between group replacement and individual replacement?</strong>
+                <br />
+                A5: Group replacement involves replacing a group of similar items at the same time, while individual replacement involves replacing each item as it fails.
+            </p>
         </div>
     );
 };

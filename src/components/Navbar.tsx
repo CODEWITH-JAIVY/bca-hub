@@ -9,7 +9,7 @@ export const Navbar = () => {
     <nav className="bg-secondary py-4">
       <div className="container mx-auto flex items-center justify-between">
         <a href="/" className="text-2xl font-bold text-primary">
-          BCA Study Hub
+          BCA Study Hub ( codewithjaivy)
         </a>
         <div className="hidden md:flex items-center gap-4">
           <a href="/about" className="hover:text-primary">
