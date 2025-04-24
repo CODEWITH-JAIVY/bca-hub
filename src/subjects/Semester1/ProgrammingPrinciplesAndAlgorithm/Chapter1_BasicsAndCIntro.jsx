@@ -26,21 +26,45 @@ const Chapter1_BasicsAndCIntro = () => {
           <br />
           A3: A programming language is a formal language used to communicate instructions to a computer. It provides a way for programmers to express their ideas in a structured and understandable format.
         </p>
+
+        <p className="mb-4">
+          <strong>Q4: What are the different levels of programming languages?</strong>
+          <br />
+          A4: There are generally three levels:
+            <ul className="list-disc ml-6">
+              <li><strong>Machine Language:</strong> The lowest-level language, consisting of binary code (0s and 1s) that the computer can directly execute.</li>
+              <li><strong>Assembly Language:</strong> A low-level language that uses mnemonics to represent machine code instructions.</li>
+              <li><strong>High-Level Language:</strong> A language that is more abstract and uses human-readable syntax, such as C, Java, or Python.</li>
+            </ul>
+        </p>
       </section>
 
       {/* Introduction to C Language */}
       <section className="mb-6">
         <h3 className="text-xl font-semibold mb-2">Introduction to C Language</h3>
         <p className="mb-4">
-          <strong>Q4: What is the C programming language?</strong>
+          <strong>Q5: What is the C programming language?</strong>
           <br />
-          A4: C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion. It's known for its efficiency and control over hardware.
+          A5: C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion. It's known for its efficiency and control over hardware.
         </p>
 
         <p className="mb-4">
-          <strong>Q5: What are the basic features of the C language?</strong>
+          <strong>Q6: What are the basic features of the C language?</strong>
           <br />
-          A5: Basic features include functions, variables, data types, control structures, and operators. These are the building blocks you use to create programs.
+          A6: Basic features include functions, variables, data types, control structures, and operators. These are the building blocks you use to create programs.
+           <ul className="list-disc ml-6">
+            <li><strong>Functions:</strong> Reusable blocks of code.</li>
+            <li><strong>Variables:</strong> Named storage locations that hold data.</li>
+            <li><strong>Data Types:</strong> Specifies the type of data a variable can store (e.g., integer, float, character).</li>
+            <li><strong>Control Structures:</strong> Statements that control the flow of execution (e.g., if, else, for, while).</li>
+            <li><strong>Operators:</strong> Symbols that perform operations on data (e.g., +, -, *, /).</li>
+          </ul>
+        </p>
+
+        <p className="mb-4">
+          <strong>Q7: What is the history of the C language?</strong>
+          <br />
+          A7: C was developed in the early 1970s by Dennis Ritchie at Bell Labs. It was initially used to re-implement the Unix operating system.
         </p>
       </section>
 
@@ -87,6 +111,12 @@ const Chapter1_BasicsAndCIntro = () => {
             <strong>What are the key differences between source code and executable code?</strong>
             <br/>
             <em>Source code is the human-readable code written by the programmer. Executable code is the machine-readable code that the computer can directly execute.</em>
+          </li>
+           <li>
+            <strong>what are the advantages of high level languages ?</strong>
+            <br/>
+            <em>high level languages are easer to read and understand  and  take less time to write 
+</em>
           </li>
         </ol>
       </section>

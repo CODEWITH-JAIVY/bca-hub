@@ -35,6 +35,19 @@ const Chapter3_ControlStructures = () => {
              `  // Code to execute if the condition is true\n` +
              `}`}
           </code>
+
+          <strong>Example:</strong>
+           <br/>
+          <code>
+            {`#include <stdio.h>\n` +
+             `int main() {\n` +
+             `  int age = 20;\n` +
+             `  if (age >= 18) {\n` +
+             `    printf("You are an adult.\\n");\n` +
+             `  }\n` +
+             `  return 0;\n` +
+             `}`}
+          </code>
         </p>
 
         <p className="mb-4">
@@ -47,6 +60,21 @@ const Chapter3_ControlStructures = () => {
              `  // Code to execute if the condition is true\n` +
              `} else {\n` +
              `  // Code to execute if the condition is false\n` +
+             `}`}
+          </code>
+
+          <strong>Example:</strong>
+           <br/>
+          <code>
+            {`#include <stdio.h>\n` +
+             `int main() {\n` +
+             `  int age = 16;\n` +
+             `  if (age >= 18) {\n` +
+             `    printf("You are an adult.\\n");\n` +
+             `  } else {\n` +
+             `    printf("You are a minor.\\n");\n` +
+             `  }\n` +
+             `  return 0;\n` +
              `}`}
           </code>
         </p>
@@ -68,6 +96,22 @@ const Chapter3_ControlStructures = () => {
              `    // Code to execute if variable doesn't match any case\n` +
              `}`}
           </code>
+
+          <strong>Example:</strong>
+           <br/>
+          <code>
+            {`#include <stdio.h>\n` +
+             `int main() {\n` +
+             `  int day = 3;\n` +
+             `  switch (day) {\n` +
+             `    case 1: printf("Monday\\n"); break;\n` +
+             `    case 2: printf("Tuesday\\n"); break;\n` +
+             `    case 3: printf("Wednesday\\n"); break;\n` +
+             `    default: printf("Invalid day\\n");\n` +
+             `  }\n` +
+             `  return 0;\n` +
+             `}`}
+          </code>
         </p>
       </section>
 
@@ -84,6 +128,18 @@ const Chapter3_ControlStructures = () => {
              `  // Code to be repeated\n` +
              `}`}
           </code>
+
+          <strong>Example:</strong>
+           <br/>
+          <code>
+            {`#include <stdio.h>\n` +
+             `int main() {\n` +
+             `  for (int i = 0; i < 5; i++) {\n` +
+             `    printf("%d\\n", i);\n` +
+             `  }\n` +
+             `  return 0;\n` +
+             `}`}
+          </code>
         </p>
 
         <p className="mb-4">
@@ -94,6 +150,20 @@ const Chapter3_ControlStructures = () => {
           <code>
             {`while (condition) {\n` +
              `  // Code to be repeated\n` +
+             `}`}
+          </code>
+
+           <strong>Example:</strong>
+           <br/>
+          <code>
+            {`#include <stdio.h>\n` +
+             `int main() {\n` +
+             `  int i = 0;\n` +
+             `  while (i < 5) {\n` +
+             `    printf("%d\\n", i);\n` +
+             `    i++;\n` +
+             `  }\n` +
+             `  return 0;\n` +
              `}`}
           </code>
         </p>
@@ -108,6 +178,20 @@ const Chapter3_ControlStructures = () => {
              `  // Code to be repeated\n` +
              `} while (condition);`}
           </code>
+
+             <strong>Example:</strong>
+           <br/>
+          <code>
+            {`#include <stdio.h>\n` +
+             `int main() {\n` +
+             `  int i = 0;\n` +
+             `  do {\n` +
+             `    printf("%d\\n", i);\n` +
+             `    i++;\n` +
+             `  } while (i < 5);\n` +
+             `  return 0;\n` +
+             `}`}
+          </code>
         </p>
       </section>
 
@@ -118,32 +202,44 @@ const Chapter3_ControlStructures = () => {
           <li>
             <strong>Describe the syntax and usage of the if statement in C.</strong>
             <br/>
-            <em>The if statement has the syntax: <code>if (condition) {`/* code */`}</code>. The <code>condition</code> is a Boolean expression. If it evaluates to true, the code inside the curly braces is executed.</em>
+            <em>The if statement has the syntax: <code>if (condition) {`/* code */`}</code>. The <code>condition</code> is a Boolean expression. If it evaluates to true, the code inside the curly braces is executed. Provide a practical code example that demonstrates this concept.</em>
           </li>
           <li>
             <strong>How does the if-else statement differ from the if statement? Provide examples.</strong>
             <br/>
-            <em>The if-else statement provides an alternative block of code to execute if the condition in the if statement is false. Example: <code>if (x {'>'} 0) {` printf("Positive"); `} else {` printf("Non-positive"); `}</code></em>
+            <em>The if-else statement provides an alternative block of code to execute if the condition in the if statement is false. Example: 
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int x = -5;\n` +
+               `  if (x > 0) {\n` +
+               `    printf("Positive"); \n` +
+               `  } else {\n` +
+               `    printf("Non-positive"); \n` +
+               `  }\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>.  Explain the output of the code in your answer.</em>
           </li>
           <li>
             <strong>Explain the purpose of the switch statement and when it is most useful.</strong>
             <br/>
-            <em>The switch statement is used to select one of several code blocks to execute based on the value of a variable. It's most useful when you have multiple possible values to check against.</em>
+            <em>The switch statement is used to select one of several code blocks to execute based on the value of a variable. It's most useful when you have multiple possible values to check against. What are the differences between a long chain of `if else if` statements, and a switch statement?</em>
           </li>
           <li>
             <strong>What are the components of a for loop, and how do they control the loop's execution?</strong>
             <br/>
-            <em>The for loop has three components: initialization, condition, and increment. The <code>initialization</code> initializes a counter variable. The <code>condition</code> is a Boolean expression that determines whether the loop continues. The <code>increment</code> updates the counter variable after each iteration.</em>
+            <em>The for loop has three components: initialization, condition, and increment. The <code>initialization</code> initializes a counter variable. The <code>condition</code> is a Boolean expression that determines whether the loop continues. The <code>increment</code> updates the counter variable after each iteration. Provide a detailed code example explaining these.</em>
           </li>
           <li>
             <strong>How does the while loop work, and what are its common use cases?</strong>
             <br/>
-            <em>The while loop repeatedly executes a block of code as long as the condition is true. It's used when you need to repeat a block of code an unknown number of times.</em>
+            <em>The while loop repeatedly executes a block of code as long as the condition is true. It's used when you need to repeat a block of code an unknown number of times. When should you prefer using `while` instead of `for` loops?</em>
           </li>
           <li>
             <strong>Describe the key differences between the while and do-while loops.</strong>
             <br/>
-            <em>The while loop checks the condition before executing the code block, while the do-while loop checks the condition after executing the code block, guaranteeing that the code block will be executed at least once.</em>
+            <em>The while loop checks the condition before executing the code block, while the do-while loop checks the condition after executing the code block, guaranteeing that the code block will be executed at least once. Give practical code examples explaining this behavior.</em>
           </li>
           <li>
             <strong>Create a program that uses nested control structures (e.g., if inside a for loop).</strong>
@@ -161,11 +257,13 @@ const Chapter3_ControlStructures = () => {
                `  return 0;\n` +
                `}`}
             </code>
+            <br/>
+            <em>Explain the logic and output of the code provided.</em>
           </li>
           <li>
             <strong>Discuss the importance of control structures in programming.</strong>
             <br/>
-            <em>Control structures are fundamental to programming because they allow you to create programs that make decisions, repeat actions, and respond to different situations, making them more powerful and flexible.</em>
+            <em>Control structures are fundamental to programming because they allow you to create programs that make decisions, repeat actions, and respond to different situations, making them more powerful and flexible. Discuss what would happen if programming languages didn't provide control structures.</em>
           </li>
         </ol>
       </section>
