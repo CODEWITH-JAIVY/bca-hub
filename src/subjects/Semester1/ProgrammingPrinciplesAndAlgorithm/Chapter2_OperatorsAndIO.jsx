@@ -38,7 +38,7 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q4: What are relational operators?</strong>
           <br />
-          A4: Relational operators compare two operands and return a Boolean value (true or false), such as equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).
+          A4: Relational operators compare two operands and return a Boolean value (true or false), such as equal to (==), not equal to (!=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=).
         </p>
       </section>
 
