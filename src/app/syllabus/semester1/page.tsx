@@ -7,26 +7,62 @@ const subjects = [
   {
     subjectName: 'Mathematics I',
     description: 'Fundamental concepts of Mathematics.',
+    chapters: [
+      'Algebra',
+      'Calculus',
+      'Trigonometry',
+      'Coordinate Geometry',
+    ],
   },
   {
     subjectName: 'Programming Principles And Algorithm',
     description: 'Introduction to programming and algorithm design.',
+    chapters: [
+      'Introduction to Programming',
+      'Data Types and Variables',
+      'Control Structures',
+      'Algorithm Design',
+    ],
   },
   {
     subjectName: 'Computer Fundamentals and Office Automation',
     description: 'Basic computer knowledge and office automation tools.',
+    chapters: [
+      'Introduction to Computers',
+      'Operating Systems',
+      'Office Automation Tools',
+      'Networking Basics',
+    ],
   },
   {
     subjectName: 'Principle Of Management',
     description: 'Core principles of management.',
+    chapters: [
+      'Introduction to Management',
+      'Planning and Decision Making',
+      'Organizing',
+      'Controlling',
+    ],
   },
   {
     subjectName: 'Business Communication',
     description: 'Effective communication in business settings.',
+    chapters: [
+      'Introduction to Communication',
+      'Communication Process',
+      'Types of Communication',
+      'Business Correspondence',
+    ],
   },
   {
     subjectName: 'Environmental Studies',
-    description: 'Basics of Enviornmental studies.',
+    description: 'Basics of Environmental studies.',
+    chapters: [
+      'Introduction to Environmental Studies',
+      'Ecosystems',
+      'Environmental Pollution',
+      'Natural Resources',
+    ],
   },
 ];
 
@@ -41,6 +77,7 @@ const Semester1Syllabus = () => {
             subjectName={subject.subjectName}
             description={subject.description}
             semester={1}
+            chapters={subject.chapters}
           />
         ))}
       </div>

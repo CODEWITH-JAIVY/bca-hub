@@ -7,14 +7,32 @@ const subjects = [
   {
     subjectName: 'Computer Networks',
     description: 'Principles of computer networks.',
+    chapters: [
+      'Introduction to Computer Networks',
+      'Network Layers',
+      'Network Protocols',
+      'Network Security',
+    ],
   },
   {
     subjectName: 'Mobile App Development',
     description: 'Mobile application development techniques.',
+    chapters: [
+      'Introduction to Mobile App Development',
+      'Mobile App Design',
+      'Mobile App Development Platforms',
+      'Mobile App Testing',
+    ],
   },
   {
     subjectName: 'Big Data and Cloud Computing',
     description: 'Big data and cloud computing concepts.',
+    chapters: [
+      'Introduction to Big Data',
+      'Big Data Technologies',
+      'Cloud Computing Basics',
+      'Cloud Services',
+    ],
   },
 ];
 
@@ -29,6 +47,7 @@ const Semester6Syllabus = () => {
             subjectName={subject.subjectName}
             description={subject.description}
             semester={6}
+            chapters={subject.chapters}
           />
         ))}
       </div>
