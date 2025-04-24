@@ -30,10 +30,10 @@ const Chapter6_Functions = () => {
           <br />
           A3:
           <code>
-            return_type function_name(parameter_list) {<br />
-            &nbsp;&nbsp;// code to be executed<br />
-            &nbsp;&nbsp;return value;<br />
-            }
+            {`return_type function_name(parameter_list) {\n` +
+             `  // code to be executed\n` +
+             `  return value;\n` +
+             `}`}
           </code>
         </p>
 
