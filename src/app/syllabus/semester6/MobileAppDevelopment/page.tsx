@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Chapter1_IntroToMobileAppDevelopment from '@/subjects/Semester6/MobileAppDevelopment/Chapter1_IntroToMobileAppDevelopment';
 import Chapter2_AndroidDevelopmentBasics from '@/subjects/Semester6/MobileAppDevelopment/Chapter2_AndroidDevelopmentBasics';
 import Chapter3_UIAndUXDesign from '@/subjects/Semester6/MobileAppDevelopment/Chapter3_UIAndUXDesign';
 import Chapter4_AndroidAPIAndServices from '@/subjects/Semester6/MobileAppDevelopment/Chapter4_AndroidAPIAndServices';
@@ -12,7 +11,6 @@ const MobileAppDevelopmentPage = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold text-primary mb-4">Mobile App Development</h1>
-      <Chapter1_IntroToMobileAppDevelopment/>
       <Chapter2_AndroidDevelopmentBasics/>
       <Chapter3_UIAndUXDesign/>
       <Chapter4_AndroidAPIAndServices/>
