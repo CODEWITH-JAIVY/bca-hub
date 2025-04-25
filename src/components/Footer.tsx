@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 /**
  * Footer component for the application. 
@@ -18,37 +19,35 @@ export const Footer = () => {
           <strong>Follow us on Social media</strong>
         </p>
         {/* Container for social media links */}
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-row items-center justify-center gap-6">
           {/* LinkedIn link */}
           <a
             href="https://www.linkedin.com/in/sanjeet-kumar-8a21171a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-primary hover:text-blue-500 transition-colors duration-300"
           >
-            <strong>LinkedIn</strong>
+            <FaLinkedin className="text-2xl" />
           </a>
           {/* Instagram link */}
           <a
             href="https://www.instagram.com/codewithjaivy?igsh=MWJtY3hleGo5NWxkNg=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-primary hover:text-pink-500 transition-colors duration-300"
           >
-            <strong>Instagram</strong>
+            <FaInstagram className="text-2xl" />
           </a>
           {/* GitHub link */}
           <a
             href="https://github.com/CODEWITH-JAIVY"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-primary hover:text-gray-700 transition-colors duration-300"
           >
-            <strong>GitHub</strong>
+            <FaGithub className="text-2xl" />
           </a>
-           <a href="https://youtube.com/@codewithjaivy?si=xHt4DWSjJUpWVkzj" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline mt-2">
-            Follow us on YouTube
-          </a>
+          <a href="https://youtube.com/@codewithjaivy?si=xHt4DWSjJUpWVkzj" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-red-600 transition-colors duration-300"><FaYoutube className="text-2xl" /></a>
         </div>
       </div>
     </footer>
