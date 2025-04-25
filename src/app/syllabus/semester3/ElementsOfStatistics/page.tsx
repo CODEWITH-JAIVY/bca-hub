@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import Chapter1_DataAndClassification from '@/subjects/Semester3/ElementsOfStatistics/Chapter1_DataAndClassification';
 import Chapter2_CentralTendency from '@/subjects/Semester3/ElementsOfStatistics/Chapter2_CentralTendency';
