@@ -2,14 +2,14 @@ import React from 'react';
 
 const Chapter3_Deadlocks = () => {
     return (
-        <div className="max-w-4xl mx-auto p-5">
-            <h2 className="text-3xl font-semibold text-center mb-5">Chapter 3: Deadlocks</h2>
+        <div className='max-w-4xl mx-auto p-5'>
+            <h2 className='text-3xl font-semibold text-center mb-5'>Chapter 3: Deadlocks</h2>
 
             {/* Question and Answer Section */}
-            <section className="mb-8">
+            <section className='mb-8'>
                 <p><strong>Q1: What is a deadlock?</strong>
                     <br />
-                    A1: A deadlock is a situation in which two or more processes are blocked indefinitely, each waiting for the other to release a resource. This results in a situation where no process can continue its execution.
+                    A1: A deadlock is a situation in which two or more processes are blocked indefinitely, each waiting for the other to release a resource. This results in a situation where no process can continue its execution. <br/>
                 </p>
                 <p><strong>Q2: What are the necessary conditions for a deadlock to occur?</strong>
                     <br />
@@ -34,7 +34,7 @@ const Chapter3_Deadlocks = () => {
             </section>
 
             {/* System Model for Deadlocks */}
-            <section className="mb-8">
+            <section className='mb-8'>
                 <h3 className="text-2xl font-semibold mb-3">System Model for Deadlocks</h3>
                 <p>
                     A system model for deadlocks typically includes:
@@ -47,7 +47,7 @@ const Chapter3_Deadlocks = () => {
             </section>
 
             {/* Deadlock Characterization */}
-            <section className="mb-8">
+            <section className='mb-8'>
                 <h3 className="text-2xl font-semibold mb-3">Deadlock Characterization</h3>
                 <p>
                     Deadlock occurs when all four necessary conditions hold true. Here's a detailed explanation of each:
@@ -61,9 +61,9 @@ const Chapter3_Deadlocks = () => {
             </section>
 
             {/* Methods for Handling Deadlocks */}
-            <section className="mb-8">
+            <section className='mb-8'>
                 <h3 className="text-2xl font-semibold mb-3">Methods for Handling Deadlocks</h3>
-                
+
                 <h4 className="text-xl font-medium mt-5 mb-2">1. Deadlock Prevention</h4>
                 <p>
                     Deadlock prevention aims to eliminate one of the four necessary conditions for deadlock to occur.
@@ -102,10 +102,101 @@ const Chapter3_Deadlocks = () => {
                     </ul>
                 </p>
             </section>
+            {/* Detailed Questions and Answers */}
+            <section className='mb-8'>
+                <h3 className='text-2xl font-semibold mb-3'>Detailed Questions and Answers</h3>
 
+                {/* Question 16 */}
+                <h4 className="text-xl font-medium mt-5 mb-2">
+                    16. What is a deadlock? Describe the four necessary conditions for a deadlock to occur.
+                </h4>
+                <p>
+                    <strong>Answer:</strong><br />
+                    A <b>deadlock</b> is a critical situation in operating systems where two or more processes are stuck in a perpetual waiting state. <br/>
+                     Each process is waiting for a resource that is held by another process in the same group.  <br/>
+                     This creates a standstill, preventing any of the involved processes from progressing. <br/>
+                    The four necessary conditions for a deadlock to occur are:<br/>
+                    <ul>
+                        <li><b>Mutual Exclusion:</b> At least one resource must be held in a non-sharable mode. <br/>
+                        This means that only one process can use the resource at any given time.  <br/>
+                        If another process requests that resource, it must wait until the current holder releases it.</li> <br/>
+                        <li><b>Hold and Wait:</b> A process must be simultaneously holding at least one resource and waiting to acquire additional resources that are currently being held by other processes.</li> <br/>
+                        <li><b>No Preemption:</b> Resources cannot be forcibly taken away from a process. <br/>
+                        Once a process has been granted a resource, it must voluntarily release that resource. <br/>
+                         The operating system cannot forcibly remove it.</li> <br/>
+                        <li><b>Circular Wait:</b> A circular chain of processes exists, where each process is waiting for a resource that is held by the next process in the chain.  <br/>
+                        This forms a cycle where each process is blocked, leading to deadlock.</li>
+                    </ul> <br/>
+                </p>
+
+                {/* Question 17 */}
+                <h4 className='text-xl font-medium mt-5 mb-2'>
+                    17. Compare and contrast deadlock prevention, avoidance, and detection.
+                </h4>
+                <p>
+                    <strong>Answer:</strong><br />
+                    Deadlock handling can be approached in three primary ways:
+                    <CODE_BLOCK>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Deadlock Prevention</th>
+                                <th>Deadlock Avoidance</th>
+                                <th>Deadlock Detection</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Goal</strong></td>
+                                <td>Ensure one of the deadlock conditions never occurs.</td>
+                                <td>Avoid entering an unsafe state.</td>
+                                <td>Detect deadlocks after they occur.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Method</strong></td>
+                                <td>Restricts resource requests and system design.</td>
+                                <td>Dynamically analyzes resource requests.</td>
+                                <td>Monitors resource allocation graphs for cycles.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pros</strong></td>
+                                <td>Guarantees no deadlocks.</td>
+                                <td>More flexible, better resource utilization.</td>
+                                <td>Maximizes resource utilization.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cons</strong></td>
+                                <td>Low resource utilization, low system throughput.</td>
+                                <td>Requires future request knowledge, can be conservative.</td>
+                                <td>Overhead, complexity of recovery.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </CODE_BLOCK> <br/>
+                </p>
+                {/* Question 18 */}
+                <h4 className='text-xl font-medium mt-5 mb-2'>
+                    18. Explain the Banker’s algorithm in detail with an example.
+                </h4>
+                <p>
+                    <strong>Answer:</strong><br />
+                    The Banker's algorithm is a deadlock avoidance algorithm that ensures the system remains in a safe state. It simulates the allocation of resources to determine if a request can be granted without causing deadlock. If a request can lead to an unsafe state, it is denied.
+                    <br/>
+                 Example will be added latter.
+                </p>
+                {/* Question 19 */}
+                <h4 className='text-xl font-medium mt-5 mb-2'>
+                    19. How can resource allocation graphs be used to detect deadlocks?
+                </h4>
+                <p>
+                    <strong>Answer:</strong><br />
+                    Resource allocation graphs (RAGs) are used to visually represent the state of resource allocation and can help in deadlock detection. If a cycle is present in the graph, it indicates a deadlock situation.
+                </p>
+            </section>
             {/* Conclusion Section */}
-            <section className="mb-8">
-                <h3 className="text-2xl font-semibold mb-3">Summary</h3>
+            <section className='mb-8'>
+                <h3 className='text-2xl font-semibold mb-3'>Summary</h3>
                 <p>
                     Deadlock is a situation in which a set of processes are blocked, each waiting for another process to release a resource. The necessary conditions for deadlock to occur are mutual exclusion, hold and wait, no preemption, and circular wait. 
                 </p>
