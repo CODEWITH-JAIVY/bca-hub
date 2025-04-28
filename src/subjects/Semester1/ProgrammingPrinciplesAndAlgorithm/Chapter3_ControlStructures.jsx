@@ -38,6 +38,7 @@ const Chapter3_ControlStructures = () => {
 
           <strong>Example:</strong>
            <br/>
+            <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int main() {\n` +
@@ -48,6 +49,7 @@ const Chapter3_ControlStructures = () => {
              `  return 0;\n` +
              `}`}
           </code>
+            </pre>
         </p>
 
         <p className="mb-4">
@@ -65,6 +67,7 @@ const Chapter3_ControlStructures = () => {
 
           <strong>Example:</strong>
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int main() {\n` +
@@ -77,6 +80,7 @@ const Chapter3_ControlStructures = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
         </p>
 
         <p className="mb-4">
@@ -99,6 +103,7 @@ const Chapter3_ControlStructures = () => {
 
           <strong>Example:</strong>
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int main() {\n` +
@@ -112,6 +117,7 @@ const Chapter3_ControlStructures = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
         </p>
       </section>
 
@@ -131,6 +137,7 @@ const Chapter3_ControlStructures = () => {
 
           <strong>Example:</strong>
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int main() {\n` +
@@ -140,6 +147,7 @@ const Chapter3_ControlStructures = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
         </p>
 
         <p className="mb-4">
@@ -155,6 +163,7 @@ const Chapter3_ControlStructures = () => {
 
            <strong>Example:</strong>
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int main() {\n` +
@@ -166,6 +175,7 @@ const Chapter3_ControlStructures = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
         </p>
 
         <p className="mb-4">
@@ -181,6 +191,7 @@ const Chapter3_ControlStructures = () => {
 
              <strong>Example:</strong>
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int main() {\n` +
@@ -192,6 +203,7 @@ const Chapter3_ControlStructures = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
         </p>
       </section>
 
@@ -208,7 +220,8 @@ const Chapter3_ControlStructures = () => {
             <strong>How does the if-else statement differ from the if statement? Provide examples.</strong>
             <br/>
             <em>The if-else statement provides an alternative block of code to execute if the condition in the if statement is false. Example: 
-            <code>
+              <pre>
+              <code>
               {`#include <stdio.h>\n` +
                `int main() {\n` +
                `  int x = -5;\n` +
@@ -219,12 +232,14 @@ const Chapter3_ControlStructures = () => {
                `  }\n` +
                `  return 0;\n` +
                `}`}
-            </code>.  Explain the output of the code in your answer.</em>
+              </code>
+              </pre>
+.  Explain the output of the code in your answer.</em>
           </li>
           <li>
             <strong>Explain the purpose of the switch statement and when it is most useful.</strong>
             <br/>
-            <em>The switch statement is used to select one of several code blocks to execute based on the value of a variable. It's most useful when you have multiple possible values to check against. What are the differences between a long chain of `if else if` statements, and a switch statement?</em>
+            <em>The switch statement is used to select one of several code blocks to execute based on the value of a variable. It's most useful when you have multiple possible values to check against. What are the differences between a long chain of <code>if else if</code> statements, and a switch statement?</em>
           </li>
           <li>
             <strong>What are the components of a for loop, and how do they control the loop's execution?</strong>
@@ -244,7 +259,9 @@ const Chapter3_ControlStructures = () => {
           <li>
             <strong>Create a program that uses nested control structures (e.g., if inside a for loop).</strong>
             <br/>
-            <code>
+            
+            <pre>
+              <code>
               {`#include <stdio.h>\n` +
                `int main() {\n` +
                `  for (int i = 0; i < 5; i++) {\n` +
@@ -256,7 +273,8 @@ const Chapter3_ControlStructures = () => {
                `  }\n` +
                `  return 0;\n` +
                `}`}
-            </code>
+              </code>
+              </pre>
             <br/>
             <em>Explain the logic and output of the code provided.</em>
           </li>

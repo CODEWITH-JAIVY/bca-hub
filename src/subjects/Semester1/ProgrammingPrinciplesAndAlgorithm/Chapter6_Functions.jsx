@@ -19,7 +19,7 @@ const Chapter6_Functions = () => {
           <strong>Q2: What are the advantages of using functions?</strong>
           <br />
           A2: Advantages include:
-          <ul className="list-disc ml-6">
+           <ul className="list-disc ml-6">
             <li><strong>Code Reusability:</strong> You can use the same function multiple times in different parts of your program.</li>
             <li><strong>Modularity:</strong> Functions make your code more organized and easier to understand.</li>
             <li><strong>Easier Debugging:</strong> When a problem occurs, you can isolate the issue to a specific function.</li>
@@ -36,12 +36,14 @@ const Chapter6_Functions = () => {
           <br />
           A3: You define a function using the following structure:
            <br/>
+            <pre>
           <code>
             {`return_type function_name(parameter_list) {\n` +
              `  // Code to be executed\n` +
              `  return value;\n` +
              `}`}
           </code>
+            </pre>
            <br/>
           Where:
           <ul className="list-disc ml-6">
@@ -52,6 +54,7 @@ const Chapter6_Functions = () => {
 
           <strong>Example:</strong> A simple function that adds two integers.
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int add(int a, int b) {\n` +
@@ -63,6 +66,7 @@ const Chapter6_Functions = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
         </p>
 
         <p className="mb-4">
@@ -71,15 +75,19 @@ const Chapter6_Functions = () => {
           A4: A function prototype declares the function's name, return type, and parameters, allowing the compiler to check for correct usage before the function is defined. It's like a contract that tells the compiler what to expect.
           <br />
            <br/>
+           <pre>
           <code>
             {`return_type function_name(parameter_list);`}
           </code>
+            </pre>
 
           <strong>Example:</strong> Function prototype for the <code>add</code> function.
            <br/>
+           <pre>
           <code>
             {`int add(int a, int b);`}
           </code>
+            </pre>
 
         </p>
       </section>
@@ -103,6 +111,7 @@ const Chapter6_Functions = () => {
          <p className="mb-4">
           <strong>Example:</strong> A demonstration of Local and Global variables.
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int globalVar = 10;\n`+
@@ -116,8 +125,8 @@ const Chapter6_Functions = () => {
              `  return 0;\n` +
              `}`}
           </code>
-           <br/>
-           *In this code, what happens if there's a variable with the same name in both local and global scope.
+           </pre>
+           *In this code, what happens if there's a variable with the same name in both local and global scope?
         </p>
       </section>
 
@@ -136,13 +145,15 @@ const Chapter6_Functions = () => {
             
           Calculate the factorial function recursively:
            <br/>
+           <pre>
           <code>
             {`#include <stdio.h>\n` +
              `int factorial(int n) {\n` +
-             `  if (n == 0)\n` +
+             `  if (n == 0) {\n` +
              `   return 1;\n` +
-             `  else\n` +
+             `  } else {\n` +
              `   return n * factorial(n - 1);\n` +
+             `  }\n` +
              `}\n` +
              `int main() {\n` +
              `  int num = 5;\n` +
@@ -150,6 +161,7 @@ const Chapter6_Functions = () => {
              `  return 0;\n` +
              `}`}
           </code>
+           </pre>
            <br/>
             What is the output of this code?
         </p>

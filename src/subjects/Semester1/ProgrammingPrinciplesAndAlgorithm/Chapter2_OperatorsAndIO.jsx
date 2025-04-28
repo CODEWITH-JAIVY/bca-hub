@@ -32,18 +32,20 @@ const Chapter2_OperatorsAndIO = () => {
         </p>
           <p className="mb-4">
           <strong>Example of Arithmetic Operators:</strong>
-          <code>
-            {`#include <stdio.h>\n` +
-             `int main() {\n` +
-             `  int a = 10, b = 5;\n` +
-             `  printf("a + b = %d\\n", a + b);  // Output: 15\n` +
-             `  printf("a - b = %d\\n", a - b);  // Output: 5\n` +
-             `  printf("a * b = %d\\n", a * b);  // Output: 50\n` +
-             `  printf("a / b = %d\\n", a / b);  // Output: 2\n` +
-             `  printf("a % b = %d\\n", a % b);  // Output: 0\n` +
-             `  return 0;\n` +
-             `}`}
-          </code>
+          <pre>
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int a = 10, b = 5;\n` +
+               `  printf("a + b = %d\\n", a + b);  // Output: 15\n` +
+               `  printf("a - b = %d\\n", a - b);  // Output: 5\n` +
+               `  printf("a * b = %d\\n", a * b);  // Output: 50\n` +
+               `  printf("a / b = %d\\n", a / b);  // Output: 2\n` +
+               `  printf("a % b = %d\\n", a % b);  // Output: 0\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>
+          </pre>
         </p>
       </section>
 
@@ -53,24 +55,26 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q4: What are relational operators?</strong>
           <br />
-          A4: Relational operators compare two operands and return a Boolean value (true or false), such as equal to (<code>==</code>), not equal to (<code>!=</code>), greater than (<code>&gt;</code>), less than (<code>&lt;</code>), greater than or equal to (<code>&gt;=</code>), and less than or equal to (<code>&lt;=</code>). These are essential for making decisions in your code.
+          A4: Relational operators compare two operands and return a Boolean value (true or false), such as equal to (==), not equal to (!=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). These are essential for making decisions in your code.
         </p>
 
          <p className="mb-4">
           <strong>Example of Relational Operators:</strong>
-          <code>
-            {`#include <stdio.h>\n` +
-             `int main() {\n` +
-             `  int a = 10, b = 5;\n` +
-             `  printf("a == b: %d\\n", a == b);  // Output: 0 (false)\n` +
-             `  printf("a != b: %d\\n", a != b);  // Output: 1 (true)\n` +
-             `  printf("a > b: %d\\n", a > b);   // Output: 1 (true)\n` +
-             `  printf("a < b: %d\\n", a < b);   // Output: 0 (false)\n` +
-             `  printf("a >= b: %d\\n", a >= b);  // Output: 1 (true)\n` +
-             `  printf("a <= b: %d\\n", a <= b);  // Output: 0 (false)\n` +
-             `  return 0;\n` +
-             `}`}
-          </code>
+          <pre>
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int a = 10, b = 5;\n` +
+               `  printf("a == b: %d\\n", a == b);  // Output: 0 (false)\n` +
+               `  printf("a != b: %d\\n", a != b);  // Output: 1 (true)\n` +
+               `  printf("a > b: %d\\n", a > b);   // Output: 1 (true)\n` +
+               `  printf("a < b: %d\\n", a < b);   // Output: 0 (false)\n` +
+               `  printf("a >= b: %d\\n", a >= b);  // Output: 1 (true)\n` +
+               `  printf("a <= b: %d\\n", a <= b);  // Output: 0 (false)\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>
+          </pre>
         </p>
       </section>
 
@@ -80,21 +84,23 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q5: What are logical operators?</strong>
           <br />
-          A5: Logical operators combine two or more conditions and return a Boolean value, such as AND (<code>&amp;&amp;</code>), OR (<code>||</code>), and NOT (<code>!</code>). They help you create more complex conditions.
+          A5: Logical operators combine two or more conditions and return a Boolean value, such as AND (&amp;&amp;), OR (||), and NOT (!). They help you create more complex conditions.
         </p>
                  <p className="mb-4">
           <strong>Example of Logical Operators:</strong>
-          <code>
-            {`#include <stdio.h>\n` +
-             `int main() {\n` +
-             `  int a = 1, b = 0;\n` +
-             `  printf("a && b: %d\\n", a && b);  // Output: 0 (false)\n` +
-             `  printf("a || b: %d\\n", a || b);  // Output: 1 (true)\n` +
-             `  printf("!a: %d\\n", !a);     // Output: 0 (false)\n` +
-             `  printf("!b: %d\\n", !b);     // Output: 1 (true)\n` +
-             `  return 0;\n` +
-             `}`}
-          </code>
+          <pre>
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int a = 1, b = 0;\n` +
+               `  printf("a && b: %d\\n", a && b);  // Output: 0 (false)\n` +
+               `  printf("a || b: %d\\n", a || b);  // Output: 1 (true)\n` +
+               `  printf("!a: %d\\n", !a);     // Output: 0 (false)\n` +
+               `  printf("!b: %d\\n", !b);     // Output: 1 (true)\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>
+          </pre>
         </p>
       </section>
 
@@ -104,25 +110,27 @@ const Chapter2_OperatorsAndIO = () => {
         <p className="mb-4">
           <strong>Q6: What are assignment operators?</strong>
           <br />
-          A6: Assignment operators assign a value to a variable, such as <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, and <code>/=</code>. They are used to store values in variables.
+          A6: Assignment operators assign a value to a variable, such as =, +=, -=, *=, and /=. They are used to store values in variables.
         </p>
                    <p className="mb-4">
           <strong>Example of Assignment Operators:</strong>
-          <code>
-            {`#include <stdio.h>\n` +
-             `int main() {\n` +
-             `  int a = 10;\n` +
-             `  a += 5;  // a = a + 5; Output: 15\n` +
-             `  printf("a += 5: %d\\n", a);\n` +
-             `  a -= 3;  // a = a - 3; Output: 12\n` +
-             `  printf("a -= 3: %d\\n", a);\n` +
-             `  a *= 2;  // a = a * 2; Output: 24\n` +
-             `  printf("a *= 2: %d\\n", a);\n` +
-             `  a /= 4;  // a = a / 4; Output: 6\n` +
-             `  printf("a /= 4: %d\\n", a);\n` +
-             `  return 0;\n` +
-             `}`}
-          </code>
+          <pre>
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int a = 10;\n` +
+               `  a += 5;  // a = a + 5; Output: 15\n` +
+               `  printf("a += 5: %d\\n", a);\n` +
+               `  a -= 3;  // a = a - 3; Output: 12\n` +
+               `  printf("a -= 3: %d\\n", a);\n` +
+               `  a *= 2;  // a = a * 2; Output: 24\n` +
+               `  printf("a *= 2: %d\\n", a);\n` +
+               `  a /= 4;  // a = a / 4; Output: 6\n` +
+               `  printf("a /= 4: %d\\n", a);\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>
+          </pre>
         </p>
       </section>
 
@@ -137,16 +145,18 @@ const Chapter2_OperatorsAndIO = () => {
 
          <p className="mb-4">
           <strong>Example of Input/Output Functions:</strong>
-          <code>
-            {`#include <stdio.h>\n` +
-             `int main() {\n` +
-             `  int num;\n` +
-             `  printf("Enter an integer: ");\n` +
-             `  scanf("%d", &num);\n` +
-             `  printf("You entered: %d\\n", num);\n` +
-             `  return 0;\n` +
-             `}`}
-          </code>
+          <pre>
+            <code>
+              {`#include <stdio.h>\n` +
+               `int main() {\n` +
+               `  int num;\n` +
+               `  printf("Enter an integer: ");\n` +
+               `  scanf("%d", &num);\n` +
+               `  printf("You entered: %d\\n", num);\n` +
+               `  return 0;\n` +
+               `}`}
+            </code>
+          </pre>
         </p>
       </section>
 
@@ -172,6 +182,7 @@ const Chapter2_OperatorsAndIO = () => {
           <li>
             <strong>Create a program that demonstrates the use of logical operators.</strong>
             <br/>
+           <pre> 
             <code>
               {`#include <stdio.h>\n` +
                `int main() {\n` +
@@ -182,6 +193,7 @@ const Chapter2_OperatorsAndIO = () => {
                `  return 0;\n` +
                `}`}
             </code>
+            </pre>
             <br/>
             <em>Explain the output of the code.</em>
           </li>
@@ -198,12 +210,12 @@ const Chapter2_OperatorsAndIO = () => {
           <li>
             <strong>Explain how the scanf() function reads input from the user.</strong>
             <br/>
-            <em>scanf() reads input from the user and stores it in variables. You need to provide format specifiers that match the data types of the variables you're reading into. Don't forget the ampersand (&amp;) before variable names! Provide some examples and discuss how to handle different data types.</em>
+            <em>scanf() reads input from the user and stores it in variables. You need to provide format specifiers that match the data types of the variables you're reading into. Don't forget the ampersand (&) before variable names! Provide some examples and discuss how to handle different data types.</em>
           </li>
           <li>
             <strong>What are the common errors to avoid when using I/O functions in C?</strong>
             <br/>
-            <em>Common errors include using incorrect format specifiers, forgetting the &amp; in scanf(), and not handling input validation. Discuss how to handle these errors in code with examples.</em>
+            <em>Common errors include using incorrect format specifiers, forgetting the & in scanf(), and not handling input validation. Discuss how to handle these errors in code with examples.</em>
           </li>
         </ol>
       </section>

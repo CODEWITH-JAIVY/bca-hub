@@ -50,7 +50,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
         <p className="mb-4">
           <strong>Q2: How do you write a C program to find the average of three numbers?</strong>
           <br />
-          A2: To find the average, you first need to declare three float variables to store the numbers and another float variable for the average. Prompt the user to input the three numbers, read them using <code>scanf()</code>, calculate the average, and display the result using <code>printf()</code>.
+          A2: To find the average, you first need to declare three float variables to store the numbers and another float variable for the average. Prompt the user to enter the three numbers, read them using <code>scanf()</code>, calculate the average, and display the result using <code>printf()</code>.
           <pre>
             <code>
               {`#include <stdio.h>\n` +
@@ -65,6 +65,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
             </code>
           </pre>
         </p>
+
          <p className="mb-4">
         <strong>Walkthrough:</strong>
         <ul>
@@ -75,7 +76,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
         <li><code>scanf("%f %f %f", &a, &b, &c);</code>: Reads three float numbers from the user and stores them in variables <code>a</code>, <code>b</code>, and <code>c</code>.</li>
         <li><code>average = (a + b + c) / 3;</code>: Calculates the average of <code>a</code>, <code>b</code>, and <code>c</code>.</li>
         <li><code>printf("Average = %.2f", average);</code>: Displays the calculated average to two decimal places.</li>
-        <li><code>return 0;</code>: Indicates that the program executed successfully.</li>
+         <li><code>return 0;</code>: Indicates that the program executed successfully.</li>
         </ul>
          </p>
       </section>
@@ -126,6 +127,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
                <br/>
                <em>Include detailed comments explaining every step. What should your edge case coverage and input validations consist of to make sure only integers are entered?</em>
                <br/>
+               <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -141,12 +143,14 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 `  return 0;\n` +
                 `}`}
                </code>
+                </pre>
           </li>
           <li>
             <strong>Create a C program to find the factorial of a given number.</strong>
                <br/>
                <em>Explain how handling input errors are critical in this program, and show a sample of this.</em>
                <br/>
+               <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -165,12 +169,14 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+                </pre>
           </li>
           <li>
-            <strong>Write a C program to determine if a given number is prime or not.</strong>
+            <strong>Write a C program to determine if a number is prime or not.</strong>
                <br/>
                 <em>Add input validation so only integers can be used, and explain why loop traverses only up to n/2, what are some performance improvements you can make to this code?</em>
                <br/>
+                <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -195,12 +201,14 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+                </pre>
           </li>
           <li>
             <strong>Write a C program to swap two numbers without using a temporary variable.</strong>
                <br/>
                <em>Explain the mathematical operations underlying this algorithm and its limitations with different datatypes</em>
                <br/>
+               <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -214,12 +222,14 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+                </pre>
           </li>
           <li>
             <strong>Create a C program to convert Celsius to Fahrenheit and vice versa.</strong>
                <br/>
                 <em>Explain how could one validate the number being passed into the program is a number</em>
                <br/>
+               <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -235,12 +245,14 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+               </pre>
           </li>
           <li>
             <strong>Write a C program to calculate simple interest.</strong>
                <br/>
                 <em>Discuss the limitations of using floats.</em>
                <br/>
+                <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -252,12 +264,14 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+               </pre>
           </li>
           <li>
             <strong>Create a C program to find the area of a circle.</strong>
                <br/>
                 <em>How can we account for PI being different depending on the precision required, and allow that to be modified during runtime?</em>
                <br/>
+               <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `#define PI 3.14159\n` +
@@ -270,6 +284,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+                </pre>
           </li>
           <li>
             <strong>Write a C program to check if a number is even or odd.</strong>
@@ -277,6 +292,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
                <em>What are the other methods (bitwise or formulaic) of determining if a number is even or odd?
                Discuss their performance charactaristics.</em>
                <br/>
+               <pre>
                <code>
                {`#include <stdio.h>\n` +
                 `int main() {\n` +
@@ -291,6 +307,7 @@ const Chapter5_SimpleArithmeticProblems = () => {
                 ` return 0;\n` +
                 `}`}
                </code>
+               </pre>
           </li>
         </ol>
       </section>
@@ -299,4 +316,3 @@ const Chapter5_SimpleArithmeticProblems = () => {
 };
 
 export default Chapter5_SimpleArithmeticProblems;
-

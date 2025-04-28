@@ -22,7 +22,7 @@ export const Navbar = () => {
             Contact
           </a>
            
-           <Button variant="outline" >
+           <Button variant="outline" asChild>
               <a href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
                 MathSolutionAI
               </a>
@@ -34,5 +34,6 @@ export const Navbar = () => {
     </nav>
   );
 };
+
 
 
