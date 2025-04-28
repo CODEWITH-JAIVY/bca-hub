@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type {Metadata} from 'next/types/metadata';
 import {Geist, Geist_Mono} from 'next/font/google';
 import './globals.css';
 import {Navbar} from '@/components/Navbar';
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-blue-100 to-blue-300`}>
         <Navbar />
         <main className="container mx-auto py-8">
           {children}
@@ -36,6 +36,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

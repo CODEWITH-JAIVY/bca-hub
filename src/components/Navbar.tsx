@@ -3,29 +3,30 @@
 import React from 'react';
 import {MobileMenu} from './MobileMenu';
 import {Button} from "@/components/ui/button"
+import Link from 'next/link';
 
 export const Navbar = () => {
   return (
     <nav className="bg-secondary py-4">
       <div className="container mx-auto flex items-center justify-between">
-        <a href="/" className="text-2xl font-bold text-primary">
+        <Link href="/" className="text-2xl font-bold text-primary">
           BCA Study Hub ( codewithjaivy)
-        </a>
+        </Link>
         <div className="hidden md:flex items-center gap-4">
-          <a href="/about" className="hover:text-primary">
+          <Link href="/about" className="hover:text-primary">
             About
-          </a>
-          <a href="/syllabus" className="hover:text-primary">
+          </Link>
+          <Link href="/syllabus" className="hover:text-primary">
             Syllabus
-          </a>
-          <a href="/contact" className="hover:text-primary">
+          </Link>
+          <Link href="/contact" className="hover:text-primary">
             Contact
-          </a>
+          </Link>
            
            <Button variant="outline" asChild>
-              <a href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm">
                 MathSolutionAI
-              </a>
+              </Link>
             </Button>
           <Button variant="outline">Login</Button>
         </div>
@@ -34,6 +35,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-
-
-

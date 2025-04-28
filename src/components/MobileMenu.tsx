@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
 import {Menu} from "lucide-react"
 import {Button} from "@/components/ui/button"
+import Link from "next/link";
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -17,21 +18,22 @@ export const MobileMenu = () => {
       </SheetTrigger>
       <SheetContent side="right" className="sm:w-[300px] p-4">
         <div className="flex flex-col gap-4">
-          <a href="/about" className="hover:text-primary">
+          <Link href="/about" className="hover:text-primary">
             About
-          </a>
-          <a href="/syllabus" className="hover:text-primary">
+          </Link>
+          <Link href="/syllabus" className="hover:text-primary">
             Syllabus
-          </a>
-          <a href="/contact" className="hover:text-primary">
+          </Link>
+          <Link href="/contact" className="hover:text-primary">
             Contact
-          </a>
+          </Link>
           
-          <Button variant="outline">
-            <a href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
-              MathSolutionAI
-            </a>
-          </Button>
+            <Button variant="outline" asChild>
+              <Link href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                MathSolutionAI
+              </Link>
+            </Button>
+          
           
           <Button variant="outline">Login</Button>
         </div>
@@ -39,4 +41,3 @@ export const MobileMenu = () => {
     </Sheet>
   );
 };
-
