@@ -136,44 +136,42 @@ const Chapter3_Deadlocks = () => {
                 <p>
                     <strong>Answer:</strong><br />
                     Deadlock handling can be approached in three primary ways:
-                    <CODE_BLOCK>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Deadlock Prevention</th>
-                                <th>Deadlock Avoidance</th>
-                                <th>Deadlock Detection</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Goal</strong></td>
-                                <td>Ensure one of the deadlock conditions never occurs.</td>
-                                <td>Avoid entering an unsafe state.</td>
-                                <td>Detect deadlocks after they occur.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Method</strong></td>
-                                <td>Restricts resource requests and system design.</td>
-                                <td>Dynamically analyzes resource requests.</td>
-                                <td>Monitors resource allocation graphs for cycles.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Pros</strong></td>
-                                <td>Guarantees no deadlocks.</td>
-                                <td>More flexible, better resource utilization.</td>
-                                <td>Maximizes resource utilization.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Cons</strong></td>
-                                <td>Low resource utilization, low system throughput.</td>
-                                <td>Requires future request knowledge, can be conservative.</td>
-                                <td>Overhead, complexity of recovery.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </CODE_BLOCK> <br/>
+                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">Feature</th>
+                            <th scope="col" className="px-6 py-3">Deadlock Prevention</th>
+                            <th scope="col" className="px-6 py-3">Deadlock Avoidance</th>
+                            <th scope="col" className="px-6 py-3">Deadlock Detection</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><strong>Goal</strong></td>
+                            <td className="px-6 py-4">Ensure one of the deadlock conditions never occurs.</td>
+                            <td className="px-6 py-4">Avoid entering an unsafe state.</td>
+                            <td className="px-6 py-4">Detect deadlocks after they occur.</td>
+                        </tr>
+                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><strong>Method</strong></td>
+                            <td className="px-6 py-4">Restricts resource requests and system design.</td>
+                            <td className="px-6 py-4">Dynamically analyzes resource requests.</td>
+                            <td className="px-6 py-4">Monitors resource allocation graphs for cycles.</td>
+                        </tr>
+                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><strong>Pros</strong></td>
+                            <td className="px-6 py-4">Guarantees no deadlocks.</td>
+                            <td className="px-6 py-4">More flexible, better resource utilization.</td>
+                            <td className="px-6 py-4">Maximizes resource utilization.</td>
+                        </tr>
+                        <tr className="bg-white dark:bg-gray-800">
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><strong>Cons</strong></td>
+                            <td className="px-6 py-4">Low resource utilization, low system throughput.</td>
+                            <td className="px-6 py-4">Requires future request knowledge, can be conservative.</td>
+                            <td className="px-6 py-4">Overhead, complexity of recovery.</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
                 </p>
                 {/* Question 18 */}
                 <h4 className='text-xl font-medium mt-5 mb-2'>
