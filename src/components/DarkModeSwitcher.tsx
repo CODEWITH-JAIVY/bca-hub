@@ -1,3 +1,4 @@
+"use client";
 
 import * as React from "react";
 import { Switch } from "@/components/ui/switch";

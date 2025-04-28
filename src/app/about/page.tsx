@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import {
   FaGithub, FaLinkedin, FaInstagram, FaYoutube,
 } from "react-icons/fa";
-import DarkModeSwitcher from "@/components/DarkModeSwitcher";
+import {DarkModeSwitcher} from "@/components/DarkModeSwitcher";
 import Image from 'next/image';
 
 // Define the AboutPage component
@@ -26,6 +26,7 @@ const AboutPage = () => {
             width={400}
             height={300}
             className="h-72 w-full object-cover rounded-l-3xl shadow-lg"
+             style={{ objectFit: 'cover' }}
           />
         </div>
 
