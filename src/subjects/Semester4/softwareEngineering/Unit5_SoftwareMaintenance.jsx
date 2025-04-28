@@ -1,4 +1,4 @@
-jsx
+'use client';
 import React from 'react';
 
 const Unit5_SoftwareMaintenance = () => {
@@ -66,4 +66,3 @@ const Unit5_SoftwareMaintenance = () => {
 };
 
 export default Unit5_SoftwareMaintenance;
-
