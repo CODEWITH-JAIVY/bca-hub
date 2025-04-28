@@ -26,9 +26,17 @@ export const MobileMenu = () => {
           <a href="/contact" className="hover:text-primary">
             Contact
           </a>
+          
+          <Button variant="outline">
+            <a href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+              MathSolutionAI
+            </a>
+          </Button>
+          
           <Button variant="outline">Login</Button>
         </div>
       </SheetContent>
     </Sheet>
   );
 };
+
