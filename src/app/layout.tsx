@@ -26,16 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-blue-100 to-blue-300`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="bg-gradient-to-r from-blue-100 to-blue-300">
         <Navbar />
+        </div>
         <main className="container mx-auto py-8">
           {children}
         </main>
+        <div className="bg-gradient-to-r from-blue-100 to-blue-300">
         <Footer />
+        </div>
       </body>
     </html>
   );
 }
+
 
 
 
