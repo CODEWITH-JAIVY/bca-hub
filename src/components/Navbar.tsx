@@ -21,7 +21,8 @@ export const Navbar = () => {
           <a href="/contact" className="hover:text-primary">
             Contact
           </a>
-           <Button variant="outline" asChild>
+           
+           <Button variant="outline" >
               <a href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
                 MathSolutionAI
               </a>
