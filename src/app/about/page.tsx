@@ -21,7 +21,7 @@ const AboutPage = () => {
         <div className="flex-shrink-0 w-full lg:w-1/2">
           <img
             src="/jaivyroy.jpg"
-            alt="developer"
+            alt="developer jaivy roy"
             className="h-72 w-full object-cover rounded-l-3xl shadow-lg"
           />
         </div>
