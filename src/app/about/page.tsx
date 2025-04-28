@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import {
   FaGithub, FaLinkedin, FaInstagram, FaYoutube,
 } from "react-icons/fa";
-import DarkModeSwitcher from "@/app/components/DarkModeSwitcher";
+import DarkModeSwitcher from "@/components/DarkModeSwitcher";
+import Image from 'next/image';
 
 // Define the AboutPage component
 const AboutPage = () => {
@@ -19,9 +20,11 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="mb-12 flex flex-col lg:flex-row items-center gap-8">
         <div className="flex-shrink-0 w-full lg:w-1/2">
-          <img
+          <Image
             src="/jaivyroy.jpg"
             alt="developer jaivy roy"
+            width={400}
+            height={300}
             className="h-72 w-full object-cover rounded-l-3xl shadow-lg"
           />
         </div>
