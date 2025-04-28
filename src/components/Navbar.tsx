@@ -21,6 +21,11 @@ export const Navbar = () => {
           <a href="/contact" className="hover:text-primary">
             Contact
           </a>
+           <Button variant="outline" asChild>
+              <a href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                MathSolutionAI
+              </a>
+            </Button>
           <Button variant="outline">Login</Button>
         </div>
         <MobileMenu />
@@ -28,4 +33,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
 
