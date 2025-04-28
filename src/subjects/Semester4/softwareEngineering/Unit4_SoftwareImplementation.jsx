@@ -1,4 +1,4 @@
-jsx
+'use client';
 import React from 'react';
 
 const Unit4_SoftwareImplementation = () => {
