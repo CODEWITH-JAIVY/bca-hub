@@ -1,33 +1,20 @@
+
 "use client";
 
 import React from 'react';
-import {SubjectCard} from '@/components/SubjectCard';
+import { SubjectCard } from '@/components/SubjectCard';
 
 const subjects = [
   {
-    subjectName: 'OOP Using C++',
-    description: 'Object-oriented programming concepts using C++.',
+    subjectName: 'Business Economics',
+    description: 'Economic principles in business decision-making.',
     chapters: [
-      'Intro To OOP and C++',
-      'Classes and Objects',
-      'Inheritance and Polymorphism',
-      'Generic Functions and Templates',
-      'File Handling and Exceptions'
+      'Economic Basics and Production',
+      'Market Structures',
+      'Macroeconomic Concepts',
+      'World Economy and WTO',
     ],
-    subjectLink: '/syllabus/semester3/OOPUsingC++',
-  },
-  {
-    subjectName: 'Data Structures',
-    description: 'Fundamental data structures and their applications.',
-    chapters: [
-      'Arrays and Matrices',
-      'Stacks and Queues',
-      'Linked Lists',
-      'Trees and Traversal',
-      'B-Trees and Indexing',
-      'Sorting and Searching'
-    ],
-    subjectLink: '/syllabus/semester3/DataStructures',
+    subjectLink: '/syllabus/semester3/BusinessEconomics',
   },
   {
     subjectName: 'Computer Architecture and Assembly',
@@ -38,20 +25,22 @@ const subjects = [
       'Computer Arithmetic',
       'I/O and DMA',
       'Microprocessors Overview',
-      'Assembly Language Basics'
+      'Assembly Language Basics',
     ],
     subjectLink: '/syllabus/semester3/ComputerArchitectureAndAssembly',
   },
   {
-    subjectName: 'Business Economics',
-    description: 'Economic principles in business decision-making.',
+    subjectName: 'Data Structures',
+    description: 'Fundamental data structures and their applications.',
     chapters: [
-      'Economic Basics and Production',
-      'Market Structures',
-      'Macroeconomic Concepts',
-      'World Economy and WTO'
+      'Arrays and Matrices',
+      'Stacks and Queues',
+      'Linked Lists',
+      'Trees and Traversal',
+      'B-Trees and Indexing',
+      'Sorting and Searching',
     ],
-    subjectLink: '/syllabus/semester3/BusinessEconomics',
+    subjectLink: '/syllabus/semester3/DataStructures',
   },
   {
     subjectName: 'Elements of Statistics',
@@ -62,9 +51,21 @@ const subjects = [
       'Measures of Dispersion',
       'Permutation and Combination',
       'Probability and Events',
-      'Statistical Quality Control'
+      'Statistical Quality Control',
     ],
     subjectLink: '/syllabus/semester3/ElementsOfStatistics',
+  },
+  {
+    subjectName: 'OOP Using C++',
+    description: 'Object-oriented programming concepts using C++.',
+    chapters: [
+      'Intro To OOP and C++',
+      'Classes and Objects',
+      'Inheritance and Polymorphism',
+      'Generic Functions and Templates',
+      'File Handling and Exceptions',
+    ],
+    subjectLink: '/syllabus/semester3/OOPUsingC++',
   },
 ];
 

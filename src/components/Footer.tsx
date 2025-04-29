@@ -1,13 +1,14 @@
+
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 /**
- * Footer component for the application. 
+ * Footer component for the application.
  * This component displays copyright information and links to various social media platforms.
  */
 export const Footer = () => {
   return (
-    <footer className="bg-secondary text-center py-4 mt-8"> 
+    <footer className="bg-card text-center py-4 mt-8 border-t"> {/* Changed bg-secondary to bg-card and added border-t */}
       {/* Copyright text */}
       <p className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} BCA Study Hub. All rights reserved (codewithjaivy).
@@ -25,7 +26,7 @@ export const Footer = () => {
             href="https://www.linkedin.com/in/sanjeet-kumar-8a21171a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-blue-500 transition-colors duration-300"
+            className="text-primary hover:text-accent transition-colors duration-300" // Changed hover color to accent
           >
             <FaLinkedin className="text-2xl" />
           </a>
@@ -34,7 +35,7 @@ export const Footer = () => {
             href="https://www.instagram.com/codewithjaivy?igsh=MWJtY3hleGo5NWxkNg=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-pink-500 transition-colors duration-300"
+            className="text-primary hover:text-accent transition-colors duration-300" // Changed hover color to accent
           >
             <FaInstagram className="text-2xl" />
           </a>
@@ -43,11 +44,13 @@ export const Footer = () => {
             href="https://github.com/CODEWITH-JAIVY"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-gray-700 transition-colors duration-300"
+            className="text-primary hover:text-accent transition-colors duration-300" // Changed hover color to accent
           >
             <FaGithub className="text-2xl" />
           </a>
-          <a href="https://youtube.com/@codewithjaivy?si=xHt4DWSjJUpWVkzj" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-red-600 transition-colors duration-300"><FaYoutube className="text-2xl" /></a>
+          <a href="https://youtube.com/@codewithjaivy?si=xHt4DWSjJUpWVkzj" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors duration-300"> {/* Changed hover color to accent */}
+            <FaYoutube className="text-2xl" />
+          </a>
         </div>
       </div>
     </footer>
