@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning> {/* Add suppressHydrationWarning */}
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
         <ThemeProvider
             attribute="class"
@@ -42,4 +42,3 @@ export default function RootLayout({
     </html>
   );
 }
-
