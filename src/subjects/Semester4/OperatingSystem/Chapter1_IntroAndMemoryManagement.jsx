@@ -1,148 +1,90 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Chapter1_IntroAndMemoryManagement = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // This ensures content renders only on the client
+  }, []);
+
+  if (!isClient) {
+    return null; // This prevents rendering before the client is ready
+  }
+
   return (
     <div className="p-6">
-      {/* Introduction to Device and Storage Management */}
-      <h2 className="text-3xl font-bold mb-4">Chapter 1: Introduction to Operating Systems and Memory Management</h2>
+      {/* UNIT-I Introduction to Operating Systems */}
+      <h2 className="text-3xl font-bold mb-6">
+        UNIT-I: Introduction to Operating Systems and Memory Management
+      </h2>
+
+      {/* Introduction */}
+      <h3 className="text-2xl font-semibold mb-4">Introduction</h3>
       <p className="mb-6">
-        Welcome to Chapter 4! In this chapter, we're going to explore two crucial areas of operating systems: device management and storage
-        management. These are the parts of the OS that make sure your computer can talk to its hardware and store information reliably. Let's dive in!
+        An Operating System (OS) is system software that manages computer hardware and software resources,
+        and provides common services for computer programs. It acts as an intermediary between users and hardware.
       </p>
 
-      {/* Device Management */}
-      <h3 className="text-2xl font-semibold mb-2">Device Management</h3>
+      {/* What is an Operating System */}
+      <h3 className="text-2xl font-semibold mb-2">What is an Operating System?</h3>
+      <p className="mb-6">
+        An Operating System controls and coordinates the use of hardware among various applications and users.
+        It provides a user-friendly environment and handles basic tasks like file management, memory management, process management, and device management.
+      </p>
+
+      {/* Types of Operating Systems */}
+      <h3 className="text-2xl font-semibold mb-4">Types of Operating Systems</h3>
 
       <p className="mb-4">
-        <strong>Q1: What is device management in an OS?</strong><br />
-        A1: Device management is a key function of an operating system (OS) that oversees and controls all of the computer's hardware devices.
-        It coordinates devices, ensures they run smoothly, and makes them available to different processes.
+        <strong>Simple Batch Systems:</strong> Jobs are collected and processed in batches without user interaction.
       </p>
-
       <p className="mb-4">
-        <strong>Q2: What is the role of device management in an OS?</strong><br />
-        A2: Device management enables communication between hardware devices and the OS. It handles device initialization, data transfer, error handling, and access control.
+        <strong>Multi-programmed Batch Systems:</strong> Multiple jobs are loaded into memory, improving CPU utilization.
       </p>
-
       <p className="mb-4">
-        <strong>Q3: What are the different techniques for device management?</strong><br />
-        A3: 
-        <ul className="list-disc ml-6">
-          <li><strong>Dedicated Devices:</strong> Allocated to a single process (e.g., a tape drive).</li>
-          <li><strong>Shared Devices:</strong> Used by multiple processes concurrently (e.g., printers, disks).</li>
-          <li><strong>Virtual Devices:</strong> Devices that appear dedicated but are shared (e.g., printers with spooling).</li>
-        </ul>
+        <strong>Time-Sharing Systems:</strong> Multiple users interact with the system simultaneously, with rapid context switching.
       </p>
-
       <p className="mb-4">
-        <strong>Q4: What are the different types of devices?</strong><br />
-        A4: 
-        <ul className="list-disc ml-6">
-          <li><strong>Input/Output (I/O) Devices:</strong> Keyboards, monitors, etc.</li>
-          <li><strong>Storage Devices:</strong> Hard drives, SSDs, USB drives.</li>
-        </ul>
+        <strong>Personal Computer Systems:</strong> Designed for individual use, providing user-friendly interfaces and diverse application support.
       </p>
-
+      <p className="mb-4">
+        <strong>Parallel Systems:</strong> Multiple CPUs working simultaneously, increasing processing speed and reliability.
+      </p>
+      <p className="mb-4">
+        <strong>Distributed Systems:</strong> Computation is distributed across multiple machines connected via a network.
+      </p>
       <p className="mb-8">
-        <strong>Q5: What is buffering and what are its benefits?</strong><br />
-        A5: Buffering uses a temporary storage area to hold data during transfer. It improves efficiency by allowing devices of different speeds to communicate effectively.
+        <strong>Real-Time Systems:</strong> Systems that respond to inputs immediately or within a defined time limit, essential for critical applications like flight control.
       </p>
 
-      {/* Storage Management */}
-      <h3 className="text-2xl font-semibold mb-2">Storage Management</h3>
+      {/* Memory Management */}
+      <h3 className="text-2xl font-semibold mb-4">Memory Management</h3>
 
       <p className="mb-4">
-        <strong>Q6: What is storage management in an OS?</strong><br />
-        A6: It oversees how data is stored and retrieved from storage devices, managing storage space efficiently.
-      </p>
-
-      <p className="mb-4">
-        <strong>Q7: Why is storage management important?</strong><br />
-        A7: It ensures data reliability, optimizes storage space usage, minimizes access times, and supports backup and recovery.
+        <strong>Background:</strong> Memory management is a crucial part of the OS that controls and coordinates the computer's memory,
+        assigning portions called blocks to various running programs to optimize overall system performance.
       </p>
 
       <p className="mb-4">
-        <strong>Q8: What is the secondary storage structure?</strong><br />
-        A8: Disks consist of platters, tracks, and sectors. The read/write head moves across sectors to access data.
+        <strong>Logical vs Physical Address Space:</strong> Logical addresses are generated by the CPU; physical addresses refer to locations in physical memory.
+        The OS and Memory Management Unit (MMU) translate logical addresses to physical ones.
       </p>
 
       <p className="mb-4">
-        <strong>Q9: What is disk scheduling and what are its goals?</strong><br />
-        A9: Disk scheduling manages disk I/O requests, aiming to minimize seek time, improve throughput, and ensure fairness.
+        <strong>Swapping:</strong> A process where a process is temporarily moved from main memory to disk and brought back later,
+        freeing up memory for other processes.
       </p>
 
-      <p className="mb-8">
-        <strong>Q10: Explain the different disk scheduling algorithms.</strong><br />
-        A10:
-        <ul className="list-disc ml-6">
-         <li><strong>FCFS (First-Come, First-Served):</strong> Simple but inefficient.</li>
-         <li><strong>SSTF (Shortest Seek Time First):</strong> Minimizes seek time but may cause starvation.</li>
-         <li><strong>SCAN (Elevator):</strong> Moves in one direction then reverses, reducing starvation.</li>
-         <li><strong>C-SCAN (Circular SCAN):</strong> Moves one way and jumps back without servicing on return, ensuring uniform wait times.</li>
-         <li><strong>LOOK:</strong> Similar to SCAN but stops at the last request.</li>
-         <li><strong>C-LOOK:</strong> Similar to LOOK but jumps back after last request.</li>
+      <p className="mb-4"><strong>Contiguous Allocation:</strong> Each process is allocated a single contiguous block of memory.</p>
+      
+        <ul className="list-disc ml-10 mb-4">
+          <li>Advantage: Simple and fast.</li>
+          <li>Disadvantage: Leads to external fragmentation.</li>
         </ul>
-      </p>
+      
 
-      <p className="mb-4">
-        <strong>Q11: What are the key tasks involved in disk management?</strong><br />
-        A11: Formatting (prepare the disk), partitioning (divide into sections), and bad block handling (manage defective sectors).
-      </p>
+      {/* Other sections... */}
 
-      <p className="mb-4">
-        <strong>Q12: What is swap-space management?</strong><br />
-        A12: Swap space acts as an overflow for RAM, temporarily holding inactive processes when memory is full.
-      </p>
-
-      <p className="mb-8">
-        <strong>Q13: Why is disk reliability important, and what are some techniques to ensure it?</strong><br />
-        A13:
-        <ul className="list-disc ml-6">
-         <li><strong>RAID:</strong> Provides redundancy and improves performance.</li>
-         <li><strong>Error Detection and Correction:</strong> Ensures data integrity.</li>
-        </ul>
-      </p>
-
-      {/* Detailed Questions and Answers */}
-      <section>
-        <h3 className="text-2xl font-semibold mb-4">Detailed Questions and Answers</h3>
-
-        {/* Question 20 */}
-        <h4 className="text-xl font-medium mt-5 mb-2">
-          20. Explain memory management techniques: contiguous allocation, paging, and segmentation.
-        </h4>
-        <p className="mb-6">
-          <strong>Contiguous Allocation:</strong> Each process gets a single continuous block of memory.<br />
-          <strong>Advantage:</strong> Simple and fast.<br />
-          <strong>Disadvantage:</strong> Leads to external fragmentation.
-          <br /><br />
-          <strong>Paging:</strong> Memory divided into fixed-size pages and frames.<br />
-          <strong>Advantage:</strong> Reduces external fragmentation.<br />
-          <strong>Disadvantage:</strong> Can cause internal fragmentation.
-          <br /><br />
-          <strong>Segmentation:</strong> Memory divided into logical segments (code, data, stack).<br />
-          <strong>Advantage:</strong> Logical organization of memory.<br />
-          <strong>Disadvantage:</strong> Causes external fragmentation.
-        </p>
-
-        {/* Question 21 */}
-        <h4 className="text-xl font-medium mt-5 mb-2">
-          21. What is virtual memory? Describe demand paging and the page fault handling process.
-        </h4>
-        <p className="mb-6">
-          <strong>Virtual Memory:</strong> Enables execution of processes not fully loaded in main memory.<br /><br />
-          <strong>Demand Paging:</strong> Loads pages only when needed.<br /><br />
-          <strong>Page Fault Handling Process:</strong><br />
-          1. Trap to OS.<br />
-          2. Locate page on disk.<br />
-          3. Find free frame.<br />
-          4. Schedule disk read.<br />
-          5. Update page table.<br />
-          6. Restart the faulting instruction.
-        </p>
-
-        {/* You can continue adding more questions similarly here if needed */}
-      </section>
     </div>
   );
 };

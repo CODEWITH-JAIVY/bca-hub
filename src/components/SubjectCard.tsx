@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface SubjectCardProps {
   subjectName: string;
@@ -16,18 +16,17 @@ export const SubjectCard: React.FC<SubjectCardProps> = ({
   chapters,
   subjectLink,
 }) => {
-
   return (
-     <Card className="hover:shadow-md transition-shadow">
+    <Card className="w-full md:w-80 shadow-md">
       <CardHeader>
-        <CardTitle className="text-primary">{subjectName}</CardTitle>
+        <CardTitle className="text-lg font-bold">{subjectName}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
+      <CardContent className="space-y-2">
+        <p className="text-sm text-gray-500">{description}</p>
         {subjectLink && (
           <a
             href={subjectLink}
-            className="inline-block mt-4 text-accent hover:underline"
+            className="inline-block text-accent hover:underline text-sm"
           >
             View Content
           </a>
@@ -36,3 +35,4 @@ export const SubjectCard: React.FC<SubjectCardProps> = ({
     </Card>
   );
 };
+
