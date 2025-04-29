@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, {useState} from 'react';
@@ -16,25 +17,25 @@ export const MobileMenu = () => {
           <Menu className="h-5 w-5"/>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="sm:w-[300px] p-4">
+      <SheetContent side="right" className="sm:w-[300px] p-4 bg-card"> {/* Added bg-card */}
         <div className="flex flex-col gap-4">
-          <Link href="/about" className="hover:text-primary">
+          <Link href="/about" className="text-foreground hover:text-primary transition-colors"> {/* Added text-foreground and transition */}
             About
           </Link>
-          <Link href="/syllabus" className="hover:text-primary">
+          <Link href="/syllabus" className="text-foreground hover:text-primary transition-colors"> {/* Added text-foreground and transition */}
             Syllabus
           </Link>
-          <Link href="/contact" className="hover:text-primary">
+          <Link href="/contact" className="text-foreground hover:text-primary transition-colors"> {/* Added text-foreground and transition */}
             Contact
           </Link>
-          
+
             <Button variant="outline" asChild>
               <Link href="https://mathesolution-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
                 MathSolutionAI
               </Link>
             </Button>
-          
-          
+
+
           <Button variant="outline">Login</Button>
         </div>
       </SheetContent>

@@ -1,8 +1,10 @@
+
 import type {Metadata} from 'next';
 import {Inter, Fira_Code} from 'next/font/google';
 import './globals.css';
 import {Navbar} from '@/components/Navbar';
 import {Footer} from '@/components/Footer';
+import { ThemeProvider } from "@/components/theme-provider"; // Import ThemeProvider
 
 const inter = Inter({subsets:['latin'], variable: '--font-inter'});
 const firaCode = Fira_Code({subsets: ['latin'], variable: '--font-fira-code'})
@@ -16,39 +18,27 @@ interface Props {
   children: React.ReactNode;
 }
 
-
-
-
-
-
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {  
+}>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${firaCode.variable} antialiased bg-gradient-to-r from-blue-500 to-purple-500`}>
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500 ">
-        <Navbar />
-        </div>
-        <main className="container mx-auto py-8">
-          {children}
-        </main>
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500 ">
-        <Footer />
-        </div>
+    <html lang="en" suppressHydrationWarning> {/* Add suppressHydrationWarning */}
+      <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          <Navbar />
+          <main className="container mx-auto py-8 min-h-screen"> {/* Added min-h-screen */}
+            {children}
+          </main>
+          <Footer />
+         </ThemeProvider>
       </body>
-
-      
     </html>
   );
 }
-
-
-
-
-
-
